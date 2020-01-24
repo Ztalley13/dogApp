@@ -1,5 +1,5 @@
 var path = require("path");
-var isAuthenticated = require("../config/middleware/isAuthenticated");
+var isAuthenticated = require("../kibbles/config/isauthenticated");
 
 module.exports = function (app) {
 
