@@ -1,40 +1,14 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Search from './components/Search'; 
-import Cart from './components/Cart'; 
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Members from "./pages/Members";
 
-const Page404 = ({ location }) => (
-   <div>
-      <h2>404 :(</h2>
-   </div>
-);
 
 function App() {
   return (
     <Router>
-      <Switch>
-        <Route 
-          exact path={"/"} 
-          component={Search}
-        />
-
-        <Route 
-          path={"/signup"} 
-          component={Cart} 
-        />
-
-        <Route 
-          path={"/profile"} 
-          component={Search}
-        />
-
-        <Route 
-          component={Page404} 
-        />
-      </Switch>
+      <Route path={"/members"} component={Members} />
     </Router>
   );
 }
 
 export default App;
-
