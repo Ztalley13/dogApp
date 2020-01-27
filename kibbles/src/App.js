@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Navigation from './components/Navigation'
 import Search from './components/Search'; 
 import Cart from './components/Cart'; 
 
