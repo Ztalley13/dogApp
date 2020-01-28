@@ -3,10 +3,15 @@ import "./style.css";
 
 function NavBar() {
   return (
-    <nav className="navbar is-mobile" role="navigation" aria-label="main navigation">
+    <nav
+      className="navbar is-mobile"
+      role="navigation"
+      aria-label="main navigation"
+    >
       <div className="navbar-brand">
         <a className="navbar-item" href="https://bulma.io">
           <img
+            alt="#"
             src="https://tse4.mm.bing.net/th?id=OIP.lpVib3nwr4YfMvR31Yzn7gHaFj&pid=Api&P=0&w=270&h=204"
             width="112"
             height="28"
@@ -32,7 +37,7 @@ function NavBar() {
         <div className="navbar-start">
           <a className="navbar-item">Home</a>
 
-          <a className="navbar-item">Events</a>
+          <a className="navbar-item">Meet Up</a>
 
           <div className="navbar-item has-dropdown is-hoverable">
             <a className="navbar-link">More</a>
