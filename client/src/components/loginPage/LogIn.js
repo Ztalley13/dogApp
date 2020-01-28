@@ -41,7 +41,7 @@ function LogInForm() {
             <button type="submit" class="btn btn-default">Login</button>
           </form>
           <br />
-          <a href="http://localhost:3000/login"><button>Home</button></a>
+          <a href="http://localhost:3000/home"><button>Home</button></a>
         </div>
       </div>
     </div>
