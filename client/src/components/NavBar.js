@@ -12,18 +12,20 @@ function NavBar() {
           />
         </a>
 
-        <a
+        <label
           role="button"
           className="navbar-burger burger"
           aria-label="menu"
           aria-expanded="false"
+          htmlFor="nav-toggle-state"
           data-target="navbarBasicExample"
         >
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
-        </a>
+        </label>
       </div>
+      <input type="checkbox" id="nav-toggle-state"style={{display: "none"}} />
 
       <div id="navbarBasicExample" className="navbar-menu">
         <div className="navbar-start">
