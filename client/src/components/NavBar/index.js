@@ -3,10 +3,15 @@ import "./style.css";
 
 function NavBar() {
   return (
-    <nav className="navbar is-mobile" role="navigation" aria-label="main navigation">
+    <nav
+      className="navbar is-mobile"
+      role="navigation"
+      aria-label="main navigation"
+    >
       <div className="navbar-brand">
         <a className="navbar-item" href="http://localhost:3000/">
           <img
+            alt="#"
             src="https://tse4.mm.bing.net/th?id=OIP.lpVib3nwr4YfMvR31Yzn7gHaFj&pid=Api&P=0&w=270&h=204"
             alt="image icon"
             width="112"
@@ -31,17 +36,23 @@ function NavBar() {
 
       <div id="navbarBasicExample" className="navbar-menu">
         <div className="navbar-start">
-          <a className="navbar-item" href='http://localhost:3000/'>Home</a>
+          <a className="navbar-item" href="http://localhost:3000/">
+            Home
+          </a>
 
-          <a className="navbar-item" href='http://localhost:3000/events'>Events</a>
+          <a className="navbar-item">Meet Up</a>
 
           <div className="navbar-item has-dropdown is-hoverable">
-            <a className="navbar-link" >More</a>
+            <a className="navbar-link">More</a>
 
             <div className="navbar-dropdown">
-              <a className="navbar-item" href='http://localhost:3000/contact'>Contact</a>
+              <a className="navbar-item" href="http://localhost:3000/contact">
+                Contact
+              </a>
               <hr className="navbar-divider" />
-              <a className="navbar-item" href='http://localhost:3000/faq'>Questions</a>
+              <a className="navbar-item" href="http://localhost:3000/faq">
+                Questions
+              </a>
             </div>
           </div>
         </div>
@@ -49,10 +60,12 @@ function NavBar() {
         <div className="navbar-end">
           <div className="navbar-item">
             <div className="buttons">
-              <a className="button is-primary">
-              <a href="http://localhost:3000/SignUp"><button>Sign Up</button></a>
+              <a className="button is-dark">
+                <button>Sign Up</button>
               </a>
-              <a href="http://localhost:3000/LogIn"><button>Login</button></a>
+              <a href="http://localhost:3000/LogIn">
+                <button>Login</button>
+              </a>
             </div>
           </div>
         </div>

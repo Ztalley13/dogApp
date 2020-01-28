@@ -5,3 +5,8 @@
   #nav-toggle-state:checked ~ .navbar-menu {
     display: block;
   }
+
+  .is-hoverable {
+    color: #363636;
+
+  }
