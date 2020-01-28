@@ -51,9 +51,15 @@ module.exports = function(sequelize, DataTypes) {
       },
       allowNull: false
     },
-    tools: {
+    neutered: {
       type: DataTypes.BOOLEAN,
       allowNull: false
+    },
+    sex: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [01]
     },
     
     status: {
