@@ -4,7 +4,7 @@ module.exports = function(sequelize, DataTypes) {
     name: {
       type: DataTypes.STRING,
       validate: {
-        len: [01]
+        len: [01] 
       }
     },
     description: {
