@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Members from "./pages/Members";
 import SignUp from "./pages/SignUp";
 import LogIn from "./pages/LogIn";
+import Contact from "./pages/Contact"
 
 
 const Page404 = ({ location }) => (
@@ -19,6 +20,7 @@ function App() {
         <Route path={"/members"} component={Members} />
         <Route path={"/signup"} component={SignUp} />
         <Route path={"/login"} component={LogIn} />
+        <Route path={"/contact"} component={Contact} />
         <Route component={Page404} />
       </Switch>
     </Router>
