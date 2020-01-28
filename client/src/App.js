@@ -1,8 +1,8 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Members from "./pages/Members";
 import SignUp from "./pages/SignUp";
-import Login from "./pages/Login";
+import LogIn from "./pages/LogIn";
 
 
 const Page404 = ({ location }) => (
@@ -15,10 +15,10 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path={"/"} component={} />
+        <Route exact path={"/"} component={LogIn} />
         <Route path={"/members"} component={Members} />
         <Route path={"/signup"} component={SignUp} />
-        <Route path={"/login"} component={Login} />
+        <Route path={"/login"} component={LogIn} />
         <Route component={Page404} />
       </Switch>
     </Router>
