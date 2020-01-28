@@ -1,21 +1,22 @@
 import React from "react";
+import "./style.css";
 
 function MemberPortfolio() {
   return (
     <body>
       <section className="section">
         <div className="container">
-          <h1 className="title">MyPage</h1>
+          <h1 className="title" id="myPage">MyPage</h1>
           <div className="tile is-ancestor">
             <div className="tile is-4 is-vertical is-parent">
               <div className="tile is-child box">
-                <p className="title">Hello, this is me...</p>
+                <h2 className="title">Hello, this is me...</h2>
                 <figure className="image is-4by3">
                   <img src="https://bulma.io/images/placeholders/640x480.png" />
                 </figure>
               </div>
               <div className="tile is-child box">
-                <p className="title">And, this is my dog.</p>
+                <h2 className="title">And, this is my dog.</h2>
                 <figure className="image is-4by3">
                   <img src="https://bulma.io/images/placeholders/640x480.png" />
                 </figure>
@@ -23,7 +24,7 @@ function MemberPortfolio() {
             </div>
             <div className="tile is-parent">
               <div className="tile is-child box">
-                <p className="title">About us</p>
+                <h2 className="title">About us</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
                   semper diam at erat pulvinar, at pulvinar felis blandit.
@@ -47,23 +48,6 @@ function MemberPortfolio() {
                   metus. Cras ullamcorper a nunc ac porta. Aliquam ut aliquet
                   lacus, quis faucibus libero. Quisque non semper leo.
                 </p>
-                <div className="tile is-ancestor">
-                  <div className="tile">
-                    <figure className="image is-4by3">
-                      <img src="https://bulma.io/images/placeholders/640x480.png" />
-                    </figure>
-                  </div>
-                  <div className="tile">
-                    <figure className="image is-4by3">
-                      <img src="https://bulma.io/images/placeholders/640x480.png" />
-                    </figure>
-                  </div>
-                  <div className="tile">
-                    <figure className="image is-4by3">
-                      <img src="https://bulma.io/images/placeholders/640x480.png" />
-                    </figure>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import NavBar from "../components/NavBar";
-import MemberPortfolio from "../components/MemberPortfolio";
+import NavBar from "../components/NavBar/NavBar";
+import MemberPortfolio from "../components/MemberPortfolio/MemberPortfolio";
 
 
 
