@@ -11,13 +11,13 @@ function MemberPortfolio() {
               <div className="tile is-child box">
                 <p className="title">Hello, this is me...</p>
                 <figure className="image is-4by3">
-                  <img src="https://bulma.io/images/placeholders/640x480.png" />
+                  <img src="https://bulma.io/images/placeholders/640x480.png" alt="image icon" />
                 </figure>
               </div>
               <div className="tile is-child box">
                 <p className="title">And, this is my dog.</p>
                 <figure className="image is-4by3">
-                  <img src="https://bulma.io/images/placeholders/640x480.png" />
+                  <img src="https://bulma.io/images/placeholders/640x480.png" alt="image icon"/>
                 </figure>
               </div>
             </div>
@@ -50,17 +50,17 @@ function MemberPortfolio() {
                 <div className="tile is-ancestor">
                   <div className="tile">
                     <figure className="image is-4by3">
-                      <img src="https://bulma.io/images/placeholders/640x480.png" />
+                      <img src="https://bulma.io/images/placeholders/640x480.png" alt="image icon"/>
                     </figure>
                   </div>
                   <div className="tile">
                     <figure className="image is-4by3">
-                      <img src="https://bulma.io/images/placeholders/640x480.png" />
+                      <img src="https://bulma.io/images/placeholders/640x480.png" alt="image icon"/>
                     </figure>
                   </div>
                   <div className="tile">
                     <figure className="image is-4by3">
-                      <img src="https://bulma.io/images/placeholders/640x480.png" />
+                      <img src="https://bulma.io/images/placeholders/640x480.png" alt="image icon"/>
                     </figure>
                   </div>
                 </div>
