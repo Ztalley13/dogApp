@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 
 function NavBar() {
   return (
@@ -25,7 +26,7 @@ function NavBar() {
           <span aria-hidden="true"></span>
         </label>
       </div>
-      <input type="checkbox" id="nav-toggle-state"style={{display: "none"}} />
+      <input type="checkbox" id="nav-toggle-state" />
 
       <div id="navbarBasicExample" className="navbar-menu">
         <div className="navbar-start">
