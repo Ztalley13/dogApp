@@ -9,10 +9,11 @@ function NavBar() {
       aria-label="main navigation"
     >
       <div className="navbar-brand">
-        <a className="navbar-item" href="https://bulma.io">
+        <a className="navbar-item" href="http://localhost:3000/">
           <img
             alt="#"
             src="https://tse4.mm.bing.net/th?id=OIP.lpVib3nwr4YfMvR31Yzn7gHaFj&pid=Api&P=0&w=270&h=204"
+            alt="image icon"
             width="112"
             height="28"
           />
@@ -35,7 +36,9 @@ function NavBar() {
 
       <div id="navbarBasicExample" className="navbar-menu">
         <div className="navbar-start">
-          <a className="navbar-item">Home</a>
+          <a className="navbar-item" href="http://localhost:3000/">
+            Home
+          </a>
 
           <a className="navbar-item">Meet Up</a>
 
@@ -43,9 +46,13 @@ function NavBar() {
             <a className="navbar-link">More</a>
 
             <div className="navbar-dropdown">
-              <a className="navbar-item">Contact</a>
+              <a className="navbar-item" href="http://localhost:3000/contact">
+                Contact
+              </a>
               <hr className="navbar-divider" />
-              <a className="navbar-item">Questions</a>
+              <a className="navbar-item" href="http://localhost:3000/faq">
+                Questions
+              </a>
             </div>
           </div>
         </div>
@@ -54,9 +61,11 @@ function NavBar() {
           <div className="navbar-item">
             <div className="buttons">
               <a className="button is-dark">
-                <strong>Sign up</strong>
+                <button>Sign Up</button>
               </a>
-              <a className="button is-light">Log in</a>
+              <a href="http://localhost:3000/LogIn">
+                <button>Login</button>
+              </a>
             </div>
           </div>
         </div>

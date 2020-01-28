@@ -56,6 +56,32 @@ function MemberPortfolio() {
                   metus. Cras ullamcorper a nunc ac porta. Aliquam ut aliquet
                   lacus, quis faucibus libero. Quisque non semper leo.
                 </p>
+                <div className="tile is-ancestor">
+                  <div className="tile">
+                    <figure className="image is-4by3">
+                      <img
+                        src="https://bulma.io/images/placeholders/640x480.png"
+                        alt="image icon"
+                      />
+                    </figure>
+                  </div>
+                  <div className="tile">
+                    <figure className="image is-4by3">
+                      <img
+                        src="https://bulma.io/images/placeholders/640x480.png"
+                        alt="image icon"
+                      />
+                    </figure>
+                  </div>
+                  <div className="tile">
+                    <figure className="image is-4by3">
+                      <img
+                        src="https://bulma.io/images/placeholders/640x480.png"
+                        alt="image icon"
+                      />
+                    </figure>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
