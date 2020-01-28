@@ -50,9 +50,9 @@ function NavBar() {
           <div className="navbar-item">
             <div className="buttons">
               <a className="button is-primary">
-                <strong>Sign up</strong>
+              <a href="http://localhost:3000/SignUp"><button>Sign Up</button></a>
               </a>
-              <a className="button is-light">Log in</a>
+              <a href="http://localhost:3000/LogIn"><button>Login</button></a>
             </div>
           </div>
         </div>
