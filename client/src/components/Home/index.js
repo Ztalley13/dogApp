@@ -24,7 +24,7 @@ function HomeForm() {
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
           <h2>Who are we?</h2>
-          
+          <p>Kibbles { "&" } Brews</p>
           <p>LogIn <a href="http://localhost:3000/LogIn">**</a></p> 
         </div>
       </div>

@@ -40,7 +40,7 @@ function NavBar() {
             Home
           </a>
 
-          <a className="navbar-item" id="navbar-item">Meet Up</a>
+          <a className="navbar-item" href="http://localhost:3000/events" id="navbar-item">Meet Up</a>
 
           <div className="navbar-item has-dropdown is-hoverable">
             <a className="navbar-link" id="navbar-item">More</a>
