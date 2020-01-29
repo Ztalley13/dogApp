@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import NavBar from "../components/NavBar";
-import EventsPage from "../components/EventsPage/EventsPage";
+import EventsPage from "../components/EventsPage";
 
 class Events extends Component {
     render() {
