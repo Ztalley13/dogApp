@@ -1,18 +1,18 @@
 import React, { Component } from "react";
 import NavBar from "../components/NavBar";
-import LogInForm from "../components/LoginPage";
+import ContactPage from "../components/Contact";
 
 
 
-class LogIn extends Component {
+class Contact extends Component {
     render() {
         return (
             <div>
             <NavBar />
-            <LogInForm />
+            <ContactPage />
             </div>
         )
     }
 }
 
-export default LogIn;
+export default Contact;

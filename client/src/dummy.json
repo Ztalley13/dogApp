@@ -1,0 +1,46 @@
+[
+    {
+        "id": 1,
+        "userName": "Austin Williams",
+        "petName": "Fitz",
+        "breed": "Boxer",
+        "images": {
+            "profileImage": "https://i.pravatar.cc/300",
+            "dogImage": "https://dog.ceo/api/breed/boxer/images/random"
+        },
+        "description": "This is me and my dog.  We want to hang out with other people and other dogs similar to us."
+    },
+    {
+        "id": 2,
+        "userName": "Paul Payton",
+        "petName": "Peanut",
+        "breed": "Boxer",
+        "images": {
+            "profileImage": "https://i.pravatar.cc/300",
+            "dogImage": "https://dog.ceo/api/breed/boxer/images/random"
+        },
+        "description": "This is me and my dog.  We want to hang out with other people and other dogs similar to us."
+    },
+    {
+        "id": 3,
+        "userName": "Jason Hill",
+        "petName": "Clover",
+        "breed": "Pitbull",
+        "images": {
+            "profileImage": "https://i.pravatar.cc/300",
+            "dogImage": "https://dog.ceo/api/breed/pitbull/images/random"
+        },
+        "description": "This is me and my dog.  We want to hang out with other people and other dogs similar to us."
+    },
+    {
+        "id": 4,
+        "userName": "Zack White",
+        "petName": "Cubie",
+        "breed": "Chihuahua Terrier",
+        "images": {
+            "profileImage": "https://i.pravatar.cc/300",
+            "dogImage": "https://dog.ceo/api/breed/chihuahua/images/random"
+        },
+        "description": "This is me and my dog.  We want to hang out with other people and other dogs similar to us."
+    }
+]

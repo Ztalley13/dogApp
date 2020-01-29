@@ -1,18 +1,16 @@
 import React, { Component } from "react";
 import NavBar from "../components/NavBar";
-import LogInForm from "../components/LoginPage";
+import EventsPage from "../components/EventsPage";
 
-
-
-class LogIn extends Component {
+class Events extends Component {
     render() {
         return (
             <div>
-            <NavBar />
-            <LogInForm />
+                <NavBar />
+                <EventsPage />
             </div>
         )
     }
 }
 
-export default LogIn;
+export default Events;
