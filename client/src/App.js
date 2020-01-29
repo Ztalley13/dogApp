@@ -5,7 +5,7 @@ import Events from "./pages/Events";
 import SignUp from "./pages/SignUp";
 import LogIn from "./pages/Login";
 import Home from "./pages/Home";
-import Contact from "./pages/Contact"
+import Contact from "./pages/Contact";
 
 
 const Page404 = ({ location }) => (

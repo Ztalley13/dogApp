@@ -1,4 +1,4 @@
-import React from 'react';
+import React from './node_modules/react';
 //import './styles.css';
 
 function ContactPage() {
@@ -8,7 +8,7 @@ function ContactPage() {
         <div class="hero-body">
           <div class="container">
             <h1 class="title">
-              Kibble and Brews
+              {"Kibbles & Brews"}
             </h1>
             <h2 class="subtitle">
               Contact Us!
