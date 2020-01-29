@@ -15,10 +15,12 @@ function EventsPage() {
 
                 <div className="field">
                     <label className="label">Subject</label>
-                    <div className="control">
+                    <div className="control" id="control">
                         <div className="select">
-                            <select>
-                                <option>Meet Up</option>
+                            <select id="options">
+                                <option id="options">Meet Up</option>
+                                <option id="options">Pet Questions</option>
+                                <option id="options">General</option>
                             </select>
                         </div>
                     </div>
@@ -32,11 +34,8 @@ function EventsPage() {
                 </div>
 
                 <div className="field is-grouped">
-                    <div className="control">
-                        <button className="button is-link">Submit</button>
-                    </div>
-                    <div className="control">
-                        <button className="button is-link is-light">Cancel</button>
+                    <div className="control" >
+                        <button className="button is-link" id="submit">Submit</button>
                     </div>
                 </div>
             </div>

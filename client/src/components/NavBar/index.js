@@ -4,11 +4,11 @@ import "./style.css";
 function NavBar() {
   return (
     <nav
-      className="navbar is-mobile"
+      className="navbar"
       role="navigation"
       aria-label="main navigation"
     >
-      <div className="navbar-brand">
+      <div className="navbar-brand" id="navbar-brand">
         <a className="navbar-item" href="http://localhost:3000/">
           <img
             alt="#"
@@ -36,22 +36,30 @@ function NavBar() {
 
       <div id="navbarBasicExample" className="navbar-menu">
         <div className="navbar-start">
-          <a className="navbar-item" href="http://localhost:3000/">
+          <a className="navbar-item" id="navbar-item" href="http://localhost:3000/">
             Home
           </a>
 
-          <a className="navbar-item">Meet Up</a>
+          <a className="navbar-item" id="navbar-item">Meet Up</a>
 
           <div className="navbar-item has-dropdown is-hoverable">
-            <a className="navbar-link">More</a>
+            <a className="navbar-link" id="navbar-item">More</a>
 
-            <div className="navbar-dropdown">
+            <div className="navbar-dropdown" id="navbar-item">
               <a className="navbar-item" href="http://localhost:3000/contact">
                 Contact
               </a>
               <hr className="navbar-divider" />
               <a className="navbar-item" href="http://localhost:3000/faq">
                 Questions
+              </a>
+              <hr className="navbar-divider" />
+              <a className="navbar-item" href="http://localhost:3000/events">
+                Make a Post
+              </a>
+              <hr className="navbar-divider" />
+              <a className="navbar-item" href="http://localhost:3000/members">
+                Member Page
               </a>
             </div>
           </div>
@@ -60,11 +68,11 @@ function NavBar() {
         <div className="navbar-end">
           <div className="navbar-item">
             <div className="buttons">
-              <a className="button is-dark">
-                <button>Sign Up</button>
+              <a className="button is-dark" id="signButton">
+                <button id="sign-up">Sign Up</button>
               </a>
               <a href="http://localhost:3000/LogIn">
-                <button>Login</button>
+                <button id="log-in">Login</button>
               </a>
             </div>
           </div>
