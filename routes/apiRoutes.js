@@ -87,7 +87,7 @@ module.exports = function(app) {
    
   });
 
-  // post route for postting all of the users
+  // post route for posting all of the users
   app.post("/api/users", function(req, res) {
     var query = { 
       id: req.body.id
@@ -143,7 +143,7 @@ module.exports = function(app) {
     };
     console.log(query)
     db.pet.update({
-      status: "occupied",
+      status: "on a playdate",
       last_occupied_id: req.body.myId
     },{
       where: query,

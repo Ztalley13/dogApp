@@ -1,3 +1,4 @@
+//to create a user log in profile 
 var bcrypt = require("bcryptjs");
 
 module.exports = function(sequelize, DataTypes) {

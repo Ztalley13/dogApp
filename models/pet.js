@@ -1,9 +1,10 @@
+//to list and display the dogs information and photos
 module.exports = function(sequelize, DataTypes) {
   const pet = sequelize.define("pet", {
     name: {
       type: DataTypes.STRING,
       validate: {
-        len: [01]
+        len: [01] 
       }
     },
     description: {
@@ -43,34 +44,30 @@ module.exports = function(sequelize, DataTypes) {
     //   },
     //   allowNull: false
     // },
-    capacity: {
+    size: {
       type: DataTypes.INTEGER,
       validate: {
         len: [01]
       },
       allowNull: false
     },
-    tools: {
+    neutered: {
       type: DataTypes.BOOLEAN,
       allowNull: false
     },
-    climate: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false
+    sex: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [01]
     },
+    
     status: {
       type: DataTypes.STRING,
       allowNull: false,
       defaultValue: "Lets Hang"
     },
-    last_request_id: {
-      type: DataTypes.INTEGER,
-      allowNull: true
-    },
-    last_occupied_id: {
-      type: DataTypes.INTEGER,
-      allowNull: true
-    },
+    
     image: {
       type: DataTypes.STRING,
       validate: {
@@ -89,4 +86,4 @@ module.exports = function(sequelize, DataTypes) {
   };
 
   return petPage;
-};
+;
