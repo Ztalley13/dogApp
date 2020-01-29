@@ -3,10 +3,15 @@ import "./style.css";
 
 function NavBar() {
   return (
-    <nav className="navbar is-mobile" role="navigation" aria-label="main navigation">
-      <div className="navbar-brand">
+    <nav
+      className="navbar"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div className="navbar-brand" id="navbar-brand">
         <a className="navbar-item" href="http://localhost:3000/">
           <img
+            alt="#"
             src="https://tse4.mm.bing.net/th?id=OIP.lpVib3nwr4YfMvR31Yzn7gHaFj&pid=Api&P=0&w=270&h=204"
             alt="image icon"
             width="112"
@@ -31,17 +36,31 @@ function NavBar() {
 
       <div id="navbarBasicExample" className="navbar-menu">
         <div className="navbar-start">
-          <a className="navbar-item" href='http://localhost:3000/'>Home</a>
+          <a className="navbar-item" id="navbar-item" href="http://localhost:3000/">
+            Home
+          </a>
 
-          <a className="navbar-item" href='http://localhost:3000/events'>Events</a>
+          <a className="navbar-item" id="navbar-item">Meet Up</a>
 
           <div className="navbar-item has-dropdown is-hoverable">
-            <a className="navbar-link" >More</a>
+            <a className="navbar-link" id="navbar-item">More</a>
 
-            <div className="navbar-dropdown">
-              <a className="navbar-item" href='http://localhost:3000/contact'>Contact</a>
+            <div className="navbar-dropdown" id="navbar-item">
+              <a className="navbar-item" href="http://localhost:3000/contact">
+                Contact
+              </a>
               <hr className="navbar-divider" />
-              <a className="navbar-item" href='http://localhost:3000/faq'>Questions</a>
+              <a className="navbar-item" href="http://localhost:3000/faq">
+                Questions
+              </a>
+              <hr className="navbar-divider" />
+              <a className="navbar-item" href="http://localhost:3000/events">
+                Make a Post
+              </a>
+              <hr className="navbar-divider" />
+              <a className="navbar-item" href="http://localhost:3000/members">
+                Member Page
+              </a>
             </div>
           </div>
         </div>
@@ -49,10 +68,12 @@ function NavBar() {
         <div className="navbar-end">
           <div className="navbar-item">
             <div className="buttons">
-              <a className="button is-primary">
-              <a href="http://localhost:3000/SignUp"><button>Sign Up</button></a>
+              <a className="button is-dark" id="signButton">
+                <button id="sign-up">Sign Up</button>
               </a>
-              <a href="http://localhost:3000/LogIn"><button>Login</button></a>
+              <a href="http://localhost:3000/LogIn">
+                <button id="log-in">Login</button>
+              </a>
             </div>
           </div>
         </div>
