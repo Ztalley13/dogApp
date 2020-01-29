@@ -2,12 +2,9 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Members from "./pages/Members";
 import Events from "./pages/Events";
-=======
 import SignUp from "./pages/SignUp";
-import LogIn from "./pages/LogIn";
+import LogIn from "./pages/Login";
 import Home from "./pages/Home";
-=======
-=======
 import Contact from "./pages/Contact"
 
 
