@@ -24,7 +24,14 @@ function HomeForm() {
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
           <h2>Who are we?</h2>
-          <p>Kibbles { "&" } Brews</p>
+          <p>Kibble’s { "&" } Brews is a social media platform for dog/beer lovers who want to be social. This page has been created to support anyone who wishes to join a group for their chosen breed of dog, and socialize with fellow dog lovers. We pride ourselves on bringing like minded people together so that they can share stories, photos and for asking questions about specific topics. 
+</p>
+          <br>
+          
+          
+          
+          
+          </br>
           <p>LogIn <a href="http://localhost:3000/LogIn">**</a></p> 
         </div>
       </div>
