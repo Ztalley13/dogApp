@@ -2,6 +2,13 @@ import React from 'react';
 import './style.css';
 
 function ContactPage() {
+
+  const handleFormSubmit = event => {
+    event.preventDefault();
+    window.location.reload(true);
+    alert("Thank You!")
+  }
+
   return (
     <body>
       <section class="hero is-info">
@@ -55,10 +62,7 @@ function ContactPage() {
 
       <div class="field is-grouped">
         <div class="control">
-          <button class="button is-link">Submit</button>
-        </div>
-        <div class="control">
-          <button class="button is-link is-light">Cancel</button>
+          <button class="button is-link" onClick={handleFormSubmit}>Submit</button>
         </div>
       </div>
     
