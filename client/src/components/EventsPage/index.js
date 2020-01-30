@@ -16,7 +16,7 @@ function EventsPage() {
     return (
         <body>
             <div className="container" id="container">
-            <div className="tile is-ancestor">
+            {/* <div className="tile is-ancestor">
             <div className="tile is-4 is-vertical is-parent">
               <div className="tile is-child box">
               <h2 className="title">Plan a Meet-Up,
@@ -25,7 +25,7 @@ function EventsPage() {
 
               </div>
               </div>
-                </div>
+                </div> */}
 
                 <div className="field">
                     <label className="label">Name</label>
