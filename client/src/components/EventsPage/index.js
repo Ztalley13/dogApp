@@ -5,6 +5,17 @@ function EventsPage() {
     return (
         <body>
             <div className="container" id="container">
+            <div className="tile is-ancestor">
+            <div className="tile is-4 is-vertical is-parent">
+              <div className="tile is-child box">
+              <h2 className="title">Lorem ipsum dolor sit amet, 
+              consectetur adipiscing elit, 
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+              Ut enim ad minim veniam.</h2>
+
+              </div>
+              </div>
+                </div>
 
                 <div className="field">
                     <label className="label">Name</label>
@@ -35,7 +46,17 @@ function EventsPage() {
 
                 <div className="field is-grouped">
                     <div className="control" >
-                        <button className="button is-link" id="submit">Submit</button>
+                        <button className="button is-link" id="submit">
+                            <div className="c1"></div>
+                            <div className="c2"></div>
+                            <div className="c3"></div>
+                            <div className="c4"></div>
+                            <div className="b1">
+                                <div class="b2">
+                                    Submit
+      </div>
+                            </div>
+                        </button>
                     </div>
                 </div>
             </div>
