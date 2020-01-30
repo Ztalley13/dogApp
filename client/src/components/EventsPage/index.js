@@ -8,10 +8,9 @@ function EventsPage() {
             <div className="tile is-ancestor">
             <div className="tile is-4 is-vertical is-parent">
               <div className="tile is-child box">
-              <h2 className="title">Lorem ipsum dolor sit amet, 
-              consectetur adipiscing elit, 
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-              Ut enim ad minim veniam.</h2>
+              <h2 className="title">Plan a Meet-Up,
+              have a Pet Question, or just a General Comment?</h2>
+              Use the form below to blog your needs.
 
               </div>
               </div>
