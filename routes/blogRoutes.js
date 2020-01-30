@@ -7,5 +7,9 @@ module.exports = function(app){
     app.get("/api/blog", function(req, res){
         db.getBlog(req,res);
     });
-    
+
+    app.delete("/api/blog", function(req, res){
+        db.deleteBlog(req, res);
+    })
+
 }
