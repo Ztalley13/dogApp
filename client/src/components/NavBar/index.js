@@ -15,7 +15,7 @@ function NavBar() {
             src="https://tse4.mm.bing.net/th?id=OIP.lpVib3nwr4YfMvR31Yzn7gHaFj&pid=Api&P=0&w=270&h=204"
             alt="image icon"
             width="112"
-            height="28"
+            height="112"
           />
         </a>
 
