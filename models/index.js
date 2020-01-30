@@ -1,4 +1,4 @@
-'use strict';
+/* 'use strict';
 require("dotenv").config();
 const fs = require('fs');
 const path = require('path');
@@ -34,3 +34,4 @@ Object.keys(db).forEach(modelName => {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
+ */

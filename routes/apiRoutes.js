@@ -1,5 +1,5 @@
 var db = require("../models");
-var passport = require("../config/passport");
+var passport = require("../client/config/passport");
 
 module.exports = function(app) {
   
@@ -39,6 +39,9 @@ module.exports = function(app) {
     db.pet.create(req.body).then(() => {
       res.sendStatus(200);
     })
+  })
+  app.post("/members", function(req, res) {
+    res.sendStatus(200);
   })
   // POST route for getting all of the pets
   app.get("/api/pets/:user_id", function(req, res) {
