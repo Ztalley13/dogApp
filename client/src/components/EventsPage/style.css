@@ -1,8 +1,8 @@
-body {
+html {
     background-image: url(https://images.unsplash.com/photo-1557684459-6f545f2438cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=3150&q=80);
     background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    background-size:cover;
+    background-attachment:fixed;
     
 }
 
