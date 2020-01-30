@@ -50,14 +50,6 @@ function NavBar() {
                 Contact
               </a>
               <hr className="navbar-divider" />
-              <a className="navbar-item" href="http://localhost:3000/faq">
-                Questions
-              </a>
-              <hr className="navbar-divider" />
-              <a className="navbar-item" href="http://localhost:3000/events">
-                Make a Post
-              </a>
-              <hr className="navbar-divider" />
               <a className="navbar-item" href="http://localhost:3000/members">
                 Member Page
               </a>
@@ -69,14 +61,12 @@ function NavBar() {
           <div className="navbar-item">
             <div className="buttons">
               <a className="button is-dark" id="signButton">
-                <button id="sign-up">Sign Up</button>
-              </a>
-              <a href="http://localhost:3000/LogIn">
-                <button id="log-in">Login</button>
+                <a href="http://localhost:3000/SignUp"><button id="sign-up">Sign Up</button></a>
+              <a href="http://localhost:3000/LogIn"><button id="log-in">Login</button></a>
               </a>
             </div>
           </div>
-        </div>
+      </div>
       </div>
     </nav>
   );
