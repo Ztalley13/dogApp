@@ -1,34 +1,43 @@
-//to create a user log in profile 
+//to create a user log in profile
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 var bcrypt = require("bcryptjs");
 
-module.exports = function(sequelize, DataTypes) {
-  var User = sequelize.define("user", {
-    email: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-      validate: {
-        isEmail: true
-      }
-    },
-    password: {
-      type: DataTypes.STRING,
-      allowNull: false
-    }
-  });
-  User.prototype.validPassword = function(password) {
-    return bcrypt.compareSync(password, this.password);
-  };
-  User.addHook("beforeCreate", function(user) {
-    user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
-    console.log(user)
-  });
+const User = new Schema({
+  name: { type: String, required: true, default: "" },
+  username: { type: String, required: true, default: "" },
+  password: { type: String, required: true, default: "" },
+  breed: { type: String, required: false, default: "" },
+  dogSize: { type: String, required: false, default: "" },
+  dogEnergy: { type: String, required: false, default: "" },
+  profileImage: { type: String, required: false, default: "" },
+  dogImage: { type: String, required: false, default: "" },
+  description: { type: String, required: false, default: "" },
+  isDeleted: { type: Boolean, default: false }
+});
 
-    User.associate = function(models) {
-    User.hasMany(models.pet, {
-      onDelete: "cascade"
-    });
-  };
+User.methods.generateHash = function(password) {
+  return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
+};
 
-  return User;
-}; 
+User.methods.validPassword = function(password) {
+  return bcrypt.compareSync(password, this.password);
+};
+
+module.exports = mongoose.model("User", User);
+//   User.prototype.validPassword = function(password) {
+//     return bcrypt.compareSync(password, this.password);
+//   };
+//   User.addHook("beforeCreate", function(user) {
+//     user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
+//     console.log(user)
+//   });
+
+//     User.associate = function(models) {
+//     User.hasMany(models.pet, {
+//       onDelete: "cascade"
+//     });
+//   };
+
+//   return User;
+// };

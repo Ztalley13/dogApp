@@ -4,10 +4,8 @@
         "userName": "Austin Williams",
         "petName": "Fitz",
         "breed": "Boxer",
-        "images": {
-            "profileImage": "https://i.pravatar.cc/300",
-            "dogImage": "https://dog.ceo/api/breed/boxer/images/random"
-        },
+        "profileImage": "https://i.pravatar.cc/300",
+        "dogImage": "https://dog.ceo/api/breed/boxer/images/random",
         "description": "This is me and my dog.  We want to hang out with other people and other dogs similar to us."
     },
     {

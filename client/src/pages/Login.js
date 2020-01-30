@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import NavBar from "../components/NavBar";
-import LogInForm from "../components/LoginPage";
+import LogInForm from "../components/loginPage/index";
 
 
 
