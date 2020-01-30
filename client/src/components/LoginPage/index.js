@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "./node_modules/react";
 import "./styles.css";
 import { getFromStorage, setInStorage } from "../../utils/storage";
 import SignUp from "../SignUp";
-import axios from "axios";
+import axios from "./node_modules/axios";
 
 function LoginForm() {
   const [loading, setLoading] = useState(true);
