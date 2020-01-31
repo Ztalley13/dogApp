@@ -6,7 +6,7 @@
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
-    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "start:dev": "concurrently \"node server.js --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
     "seed": "node scripts/seedDB.js",
     "heroku-postbuild": "cd client && npm install",
@@ -21,13 +21,14 @@
   "dependencies": {
     "axios": "^0.18.0",
     "bcrypt-nodejs": "0.0.3",
+    "bcryptjs": "^2.4.3",
     "bulma": "^0.8.0",
     "cors": "^2.8.5",
     "dotenv": "^8.0.0",
     "express": "^4.16.3",
     "express-jwt": "^5.3.1",
     "if-env": "^1.0.4",
-    "mongoose": "^5.3.16",
+    "mongoose": "^5.8.10",
     "react-router-dom": "^5.1.2"
   }
 }

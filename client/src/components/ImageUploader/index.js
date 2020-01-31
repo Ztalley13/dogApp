@@ -25,7 +25,7 @@ class ImageUploader extends Component {
   render() {
     return (
       <div className="ImageLoader">
-        <input 
+        <img 
           style={{display: "none"}}
           type="file" 
           onChange={this.fileSelectedHandler}

@@ -1,80 +1,121 @@
 import React from "react";
+import Dropdown from "../Dropdown";
 
-function SignUpForm() {
+function SignUpForm(props) {
   return (
-
-    
-    <body>
-         <div className="heading">
-    <div className="row">
-        <div className="col-8">
-        <img id="logo" src="https://tse4.mm.bing.net/th?id=OIP.lpVib3nwr4YfMvR31Yzn7gHaFj&pid=Api&P=0&w=270&h=204 " alt="logo"/>
-        <h1>Kibbles {'&'} Brews</h1>
-    </div>
-    
-    </div>
-</div>
-
-  {/* <!-- <nav className="navbar navbar-default"> --> */}
-    <div className="container-fluid">
-      <div className="navbar-header">
+    <div>
+      <div className="container" id="container">
+        <div className="notification">
+          <h1>Sign Up</h1>
+          <div className="field">
+            <p className="control">
+              <span>Name: </span>
+              <input
+                value={props.name}
+                onChange={e => props.onChange(e, "register")}
+                className="input"
+                type="name"
+                name="name"
+                placeholder="Name"
+              />
+            </p>
+          </div>
+          <div className="field">
+            <p className="control">
+              <span>Username: </span>
+              <input
+                onChange={e => props.onChange(e, "register")}
+                value={props.username}
+                className="input"
+                type="text"
+                name="username"
+                placeholder="Username"
+              />
+            </p>
+          </div>
+          <div className="field">
+            <p className="control">
+              <span>Password: </span>
+              <input
+                onChange={e => props.onChange(e, "register")}
+                value={props.password}
+                className="input"
+                type="password"
+                name="password"
+                placeholder="Password"
+              />
+            </p>
+          </div>
+          <div className="field">
+            <p className="control">
+              <span>Dog Name: </span>
+              <input
+                onChange={e => props.onChange(e, "register")}
+                value={props.password}
+                className="input"
+                type="text"
+                name="dogName"
+                placeholder="Dog Name"
+              />
+            </p>
+          </div>
+          <div className="field">
+            <p className="control">
+              <span>Breed: </span>
+              <input
+                onChange={e => props.onChange(e, "register")}
+                value={props.breed}
+                className="input"
+                name="breed"
+                type="text"
+                placeholder="Breed"
+              />
+            </p>
+          </div>
+          <Dropdown
+            onClick={props.onClick}
+            onChange={props.onChange}
+            label={"Size"}
+            buttonLabel={"By Weight"}
+            items={[
+              "Small: Less than 22lbs.",
+              "Medium: 22-57lbs.",
+              "Large: 58-99lbs.",
+              "X-Large: Over 100lbs."
+            ]}
+          />
+          <Dropdown
+            onClick={props.onClick}
+            onChange={props.onChange}
+            label={"Energy"}
+            buttonLabel={"Levels"}
+            items={["Low", "Moderate", "High"]}
+          />
+          <div className="field">
+            <p className="control">
+              <span>Description: </span>
+              <input
+                onChange={e => props.onChange(e, "register")}
+                value={props.description}
+                className="input is-large"
+                name="description"
+                type="text"
+                placeholder="Tell us about you and your dog!"
+              />
+            </p>
+          </div>
+          <div className="field">
+            <p className="control">
+              <button onClick={props.onSubmit} className="button is-dark">
+                Sign Up
+              </button>
+            </p>
+          </div>
+          <div className="field"></div>
+        </div>
       </div>
     </div>
-  {/* </nav> */}
-  <div className="signUpContainer">
-    <div className="row">
-      <div className="col-md-6 col-md-offset-3">
-        <h2>Sign Up Form</h2>
-        <form className="signup">
-          <div className="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" className="form-control" id="email-input" placeholder="Email"/>
-          </div>
-          <div className="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" className="form-control" id="password-input" placeholder="Password"/>
-          </div>
-          <div className="form-group">
-            <label for="exampleDogGroup1">Dog Info</label>
-            <select className="u-full-width" id="exampleRecipientInput">
-              <option value="Option 1">Size</option>
-              <option value="Option 2">Small</option>
-              <option value="Option 3">Medium</option>
-              <option value="Option 3">Large</option>
-              <option value="Option 3">Extra Large</option>
-            </select>
-            <select className="u-full-width" id="exampleRecipientInput">
-              <option value="Option 1">Energy Level</option>
-              <option value="Option 2">Low</option>
-              <option value="Option 3">Moderate</option>
-              <option value="Option 3">High</option>
-            </select>
-            <select className="u-full-width" id="exampleRecipientInput">
-              <option value="Option 1">Info Section</option>
-              <option value="Option 2">Small(less than 16in and less than 22lbs)</option>
-              <option value="Option 3">Medium(18in and 40lbs-60lbs)</option>
-              <option value="Option 3">Large(24in and 50lbs-100lbs)</option>
-              <option value="Option 3">Extra Large(24in and 50lbs-100+lbs)</option>
-            </select>
-
-          </div>
-          <div style={{display: "none"}} id="alert" className="alert alert-danger" role="alert">
-            <span className="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-            <span className="sr-only">Error:</span> <span className="msg"></span>
-          </div>
-          <button type="submit" className="btn btn-default">Sign Up</button>
-        </form>
-        <br />
-        <p>Or log in <a href="http://localhost:3000/login">here</a></p>
-      </div>
-    </div>
-  </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/login.js"></script>
-
-    </body>
-    );
+  );
 }
 
 export default SignUpForm;

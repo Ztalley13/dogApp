@@ -9,13 +9,13 @@ function NavBar() {
       aria-label="main navigation"
     >
       <div className="navbar-brand" id="navbar-brand">
-        <a className="navbar-item" href="http://localhost:3000/">
+        <a className="navbar-item" href="/">
           <img
             alt="#"
             src="https://tse4.mm.bing.net/th?id=OIP.lpVib3nwr4YfMvR31Yzn7gHaFj&pid=Api&P=0&w=270&h=204"
             alt="image icon"
             width="112"
-            height="28"
+            height="112"
           />
         </a>
 
@@ -36,11 +36,11 @@ function NavBar() {
 
       <div id="navbarBasicExample" className="navbar-menu">
         <div className="navbar-start">
-          <a className="navbar-item" id="navbar-item" href="http://localhost:3000/">
-            Home
+          <a className="navbar-item" id="navbar-item" href="/members">
+            My Homepage
           </a>
 
-          <a className="navbar-item" href="http://localhost:3000/events" id="navbar-item">Meet Up</a>
+          <a className="navbar-item" href="/events" id="navbar-item">Meet Up</a>
 
           <div className="navbar-item has-dropdown is-hoverable">
             <a className="navbar-link" id="navbar-item">More</a>
@@ -50,8 +50,8 @@ function NavBar() {
                 Contact
               </a>
               <hr className="navbar-divider" />
-              <a className="navbar-item" href="http://localhost:3000/members">
-                Member Page
+              <a className="navbar-item" href="/landing">
+                Members
               </a>
             </div>
           </div>
@@ -61,8 +61,8 @@ function NavBar() {
           <div className="navbar-item">
             <div className="buttons">
               <a className="button is-dark" id="signButton">
-                <a href="http://localhost:3000/SignUp"><button id="sign-up">Sign Up</button></a>
-              <a href="http://localhost:3000/LogIn"><button id="log-in">Login</button></a>
+                <a href="/SignUp"><button id="sign-up">Sign Up</button></a>
+              <a href="/Login"><button id="log-in">Login</button></a>
               </a>
             </div>
           </div>

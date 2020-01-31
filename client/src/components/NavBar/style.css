@@ -10,6 +10,9 @@
     color: #363636;
 
   }
+  .navbar-link:not(.is-arrowless)::after{
+    border-color:black;
+  }
 
   #navbar-brand, #navbarBasicExample,#navbar-item, #signButton {
     background-color:whitesmoke;

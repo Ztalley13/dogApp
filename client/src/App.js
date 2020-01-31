@@ -5,12 +5,14 @@ import Events from "./pages/Events";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
+import Landing from "./pages/Landing";
 import Contact from "./pages/Contact";
 
+
 const Page404 = ({ location }) => (
-  <div>
-    <h2>404 :(</h2>
-  </div>
+   <div>
+      <h2>404 :(</h2>
+   </div>
 );
 
 function App() {
@@ -18,12 +20,12 @@ function App() {
     <Router>
       <Switch>
         <Route exact path={"/"} component={Home} />
-        <Route path={"/events"} component={Events} />
         <Route path={"/members"} component={Members} />
+        <Route path={"/events"} component={Events} />
         <Route path={"/signup"} component={SignUp} />
-        <Route path={"/login"} component={Login} />
         <Route path={"/contact"} component={Contact} />
-        <Route path={"/home"} component={Home} />
+        <Route path={"/login"} component={Login} />
+        <Route path={"/landing"} component={Landing} />
         <Route component={Page404} />
       </Switch>
     </Router>
@@ -31,3 +33,4 @@ function App() {
 }
 
 export default App;
+

@@ -26,5 +26,9 @@ export default {
     return new Promise(resolve => {
       resolve(languages);
     });
+  },
+
+  submitBlog : function(blog){
+    return axios.post("/api/blog", blog);
   }
 };
