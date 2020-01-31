@@ -3,17 +3,32 @@ import "./style.css";
 import api from "../../utils/API";
 
 function BlogPage() {
+
+    const [blogs, setBlog] = useState();
+
+    useEffect(() => {
+        loadBlogs()
+      }, [])
+
+      function loadBlogs() {
+        API.getBlog()
+          .then(res => 
+            setBlog(res.data)
+          )
+          .catch(err => console.log(err));
+      };
+
     return (
         <body>
             <div className="container">
                 <div className="row mt-4">
                     <div className="col-md-4">
                         <div className="form-group">
-                            <select className="custom-select" id="category">
+                            {/* <select className="custom-select" id="category">
                                 <option id="options">Meet Up</option>
                                 <option id="options">Pet Questions</option>
                                 <option id="options">General</option>
-                            </select>
+                            </select> */}
                         </div>
                     </div>
                     <div className="col-md-2">

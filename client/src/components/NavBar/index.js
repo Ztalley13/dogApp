@@ -53,6 +53,11 @@ function NavBar() {
               <a className="navbar-item" href="/landing">
                 Members
               </a>
+              <hr className="navbar-divider" />
+              <a className="navbar-item" href="http://localhost:3000/blog">
+                Blog
+              </a>
+
             </div>
           </div>
         </div>
