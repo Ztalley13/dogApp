@@ -15,8 +15,30 @@ body {
     font-weight: bolder;
 }
 
+#card-content {
+    background-color: rgba(144,147,142,.8);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
 #myPage {
     color: #815832;
     font-weight: bold;
     font-size: 42px;
+}
+#cardStyle, #cardMedia{
+    background-color: transparent;
+}
+
+#cardImage{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#dogImage{
+    height:200px;
+    width:200px;
+}
+#collumOneQuarter{
+    margin-top:10%;
 }
