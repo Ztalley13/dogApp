@@ -14,6 +14,7 @@ function LoginForm() {
 
   const [register, setRegistration] = useState({
     name: "",
+    dogName: "",
     username: "",
     password: "",
     breed: "",
@@ -57,6 +58,7 @@ function LoginForm() {
       .then(data => {
         setRegistration({
           name: "",
+          dogName: "",
           username: "",
           password: "",
           breed: "",

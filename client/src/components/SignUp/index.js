@@ -48,6 +48,19 @@ function SignUpForm(props) {
           </div>
           <div className="field">
             <p className="control">
+              <span>Dog Name: </span>
+              <input
+                onChange={e => props.onChange(e, "register")}
+                value={props.password}
+                className="input"
+                type="text"
+                name="dogName"
+                placeholder="Dog Name"
+              />
+            </p>
+          </div>
+          <div className="field">
+            <p className="control">
               <span>Breed: </span>
               <input
                 onChange={e => props.onChange(e, "register")}
