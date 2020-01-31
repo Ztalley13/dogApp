@@ -88,6 +88,7 @@ html {
     position:absolute;  
     left: 15px;
     top: 15px;
+    border-radius: 30px;
   }
   .b2 {
     position: absolute;
