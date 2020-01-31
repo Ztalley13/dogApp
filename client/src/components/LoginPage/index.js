@@ -106,12 +106,12 @@ function LoginForm() {
         </div>
 
         <div className="tile is-ancestor">
-          <div className="tile">
-            <div className="notification">
+          <div className="tile" >
+            <div className="notification" id="signInNoti">
               <h1>Sign In</h1>
               <div className="field">
                 <p className="control">
-                  <input
+                  <input id="fields"
                     className="input"
                     type="text"
                     name="username"
@@ -123,7 +123,7 @@ function LoginForm() {
               </div>
               <div className="field">
                 <p className="control has-icons-left">
-                  <input
+                  <input id="fields"
                     className="input"
                     type="password"
                     name="password"

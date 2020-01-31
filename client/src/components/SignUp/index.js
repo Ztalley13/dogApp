@@ -1,5 +1,6 @@
 import React from "react";
 import Dropdown from "../Dropdown";
+import "./style.css"
 let labelSize = "By Weight";
 let Levels = "Energy Level";
 function SignUpForm(props) {
@@ -10,12 +11,12 @@ function SignUpForm(props) {
   return (
     <div>
       <div className="container" id="container">
-        <div className="notification">
+        <div className="notification" id="signUpNoti">
           <h1>Sign Up</h1>
           <div className="field">
             <p className="control">
               <span>Name: </span>
-              <input
+              <input id="fields"
                 value={props.name}
                 onChange={e => props.onChange(e, "register")}
                 className="input"
@@ -28,7 +29,7 @@ function SignUpForm(props) {
           <div className="field">
             <p className="control">
               <span>Username: </span>
-              <input
+              <input id="fields"
                 onChange={e => props.onChange(e, "register")}
                 value={props.username}
                 className="input"
@@ -41,7 +42,7 @@ function SignUpForm(props) {
           <div className="field">
             <p className="control">
               <span>Password: </span>
-              <input
+              <input id="fields"
                 onChange={e => props.onChange(e, "register")}
                 value={props.password}
                 className="input"
@@ -54,7 +55,7 @@ function SignUpForm(props) {
           <div className="field">
             <p className="control">
               <span>Dog Name: </span>
-              <input
+              <input id="fields"
                 onChange={e => props.onChange(e, "register")}
                 value={props.dogName}
                 className="input"
@@ -67,7 +68,7 @@ function SignUpForm(props) {
           <div className="field">
             <p className="control">
               <span>Breed: </span>
-              <input
+              <input id="fields"
                 onChange={e => props.onChange(e, "register")}
                 value={props.breed}
                 className="input"
@@ -100,7 +101,7 @@ function SignUpForm(props) {
           <div className="field">
             <p className="control">
               <span>Description: </span>
-              <input
+              <input id="fields"
                 onChange={e => props.onChange(e, "register")}
                 value={props.description}
                 className="input is-large"
