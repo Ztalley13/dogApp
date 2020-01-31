@@ -1,7 +1,12 @@
 import React from "react";
 import Dropdown from "../Dropdown";
-
+let labelSize = "By Weight";
+let Levels = "Energy Level";
 function SignUpForm(props) {
+  
+  function labelOnchange(e) {
+    labelSize = e;
+  }
   return (
     <div>
       <div className="container" id="container">
@@ -51,7 +56,7 @@ function SignUpForm(props) {
               <span>Dog Name: </span>
               <input
                 onChange={e => props.onChange(e, "register")}
-                value={props.password}
+                value={props.dogName}
                 className="input"
                 type="text"
                 name="dogName"
@@ -74,9 +79,10 @@ function SignUpForm(props) {
           </div>
           <Dropdown
             onClick={props.onClick}
+            labelOnchange={labelOnchange}
             onChange={props.onChange}
             label={"Size"}
-            buttonLabel={"By Weight"}
+            buttonLabel={labelSize}
             items={[
               "Small: Less than 22lbs.",
               "Medium: 22-57lbs.",
@@ -88,7 +94,7 @@ function SignUpForm(props) {
             onClick={props.onClick}
             onChange={props.onChange}
             label={"Energy"}
-            buttonLabel={"Levels"}
+            buttonLabel={Levels}
             items={["Low", "Moderate", "High"]}
           />
           <div className="field">
