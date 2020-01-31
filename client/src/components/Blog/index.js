@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./style.css";
 import api from "../../utils/API";
 
@@ -11,7 +11,7 @@ function BlogPage() {
       }, [])
 
       function loadBlogs() {
-        API.getBlog()
+        api.getBlog()
           .then(res => 
             setBlog(res.data)
           )
