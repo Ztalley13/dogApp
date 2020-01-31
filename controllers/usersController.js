@@ -33,6 +33,43 @@ createUser = (req, res) => {
   })
 }
 
+addImage = async (req, res) => {
+  const body = req.body
+
+  User.findOne({ _id: req.params.id}, (err, user) => {
+    if (err) {
+      return res.status(404).json({
+        err,
+        message: 'User not found',
+      })
+    }
+    if(body.profileImage) {
+      user.profileImage = body.profileImage;
+    } else if(body.dogImage) {
+     user.dogImage = body.dogImage
+    }
+
+    user.save()
+    .then(() => {
+        return res.status(200).json({
+          success: true,
+          id: user._id,
+          message: 'User updated',
+        })
+      })
+      .catch(error => {
+        return res.status(404).json({
+          error,
+          message: 'Error Updating',
+        })
+      })
+    
+  })
+}
+  
+
+
+
 updateUser = async (req, res) => {
   const body = req.body
 
@@ -122,4 +159,5 @@ module.exports = {
     deleteUser,
     getUser,
     getUserById,
+    addImage
 }
