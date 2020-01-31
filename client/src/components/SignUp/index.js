@@ -51,7 +51,7 @@ function SignUpForm(props) {
               <span>Dog Name: </span>
               <input
                 onChange={e => props.onChange(e, "register")}
-                value={props.password}
+                value={props.dogName}
                 className="input"
                 type="text"
                 name="dogName"
