@@ -11,7 +11,6 @@ class Members extends Component {
             <div>
             <NavBar />
             <MemberPortfolio />
-            <Main />
             </div>
         )
     }
