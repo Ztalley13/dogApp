@@ -8,12 +8,12 @@ const User = new Schema({
   dogName: { type: String, required: true, default: "" },
   username: { type: String, required: true, default: "" },
   password: { type: String, required: true, default: "" },
-  breed: { type: String, required: false, default: "" },
+  breed: { type: String, required: true, default: "" },
   dogSize: { type: String, required: false, default: "" },
   dogEnergy: { type: String, required: false, default: "" },
   profileImage: { type: String, required: false, default: "" },
   dogImage: { type: String, required: false, default: "" },
-  description: { type: String, required: false, default: "" },
+  description: { type: String, required: true, default: "" },
   isDeleted: { type: Boolean, default: false }
 });
 

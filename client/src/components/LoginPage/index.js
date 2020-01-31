@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useToasts } from "react-toast-notifications";
 import "./styles.css";
 import { getFromStorage, setInStorage } from "../../utils/storage";
 import SignUp from "../SignUp";
@@ -6,6 +7,7 @@ import axios from "axios";
 
 function LoginForm() {
   const [loading, setLoading] = useState(true);
+  const { addToast } = useToasts();
   const [login, setLogin] = useState({
     username: "",
     password: ""
@@ -18,8 +20,8 @@ function LoginForm() {
     username: "",
     password: "",
     breed: "",
-    size: "",
-    energy: "",
+    // size: "",
+    // energy: "",
     description: ""
   });
 
@@ -54,20 +56,24 @@ function LoginForm() {
     console.log(JSON.stringify(register));
     axios
       .post("/api/account/register", register)
-      .then(res => res)
-      .then(data => {
-        setRegistration({
-          name: "",
-          dogName: "",
-          username: "",
-          password: "",
-          breed: "",
-          size: "",
-          energy: "",
-          description: ""
-        });
+      //.then(res => res)
+      .then(({ data }) => {
+        if (!data.success) {
+          addToast(data.message, { appearance: "error" });
+        } else {
+          setRegistration({
+            name: "",
+            dogName: "",
+            username: "",
+            password: "",
+            breed: "",
+            // size: "",
+            // energy: "",
+            description: ""
+          });
+        }
       })
-      .catch(err => console.log(err));
+      .catch(err => console.log("caught", err));
   };
 
   const onClick = (type, item) => {

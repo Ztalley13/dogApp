@@ -6,7 +6,7 @@ const UserSession = require("../../models/userSession");
 
 router.route("/register").post((req, res) => {
   const { body } = req;
-  let { name, username, password } = body;
+  let { name, username, password, description, dogName, breed } = body;
 
   console.log("BODY: ", body);
 
@@ -28,6 +28,12 @@ router.route("/register").post((req, res) => {
       message: "Error:  Password cannot be blank."
     });
   }
+  if (!description) {
+    return res.send({
+      success: false,
+      message: "Error:  Description cannot be blank."
+    });
+  }
 
   //verify Username doesn't exist
   User.find(
@@ -41,6 +47,7 @@ router.route("/register").post((req, res) => {
           message: "Error: Server error"
         });
       } else if (previousUsers.length > 0) {
+        // alert("Username already exists, please try again.");
         return res.send({
           success: false,
           message: "Error:  Username already exists."
@@ -53,6 +60,9 @@ router.route("/register").post((req, res) => {
       newUser.username = username;
       newUser.name = name;
       newUser.password = password;
+      newUser.breed = breed;
+      newUser.description = description;
+      newUser.dogName = dogName;
       newUser.save((err, user) => {
         if (err) {
           return res.send({
