@@ -30,5 +30,8 @@ export default {
 
   submitBlog : function(blog){
     return axios.post("/api/blog", blog);
+  },
+  getBlog : function(){
+    return axios.get("/api/blog");
   }
 };

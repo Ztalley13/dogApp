@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-//import onClickOutside from "react-onclickoutside";
+import "./style.css";
+import onClickOutside from "react-onclickoutside";
 
 function Dropdown(props) {
   const [open, setOpen] = useState(false);
@@ -36,7 +37,14 @@ function Dropdown(props) {
             <div className="dropdown-content">
               {props.items.map(item => (
                 <div
-                  onClick={() => props.onClick(props.label, item)}
+                  className={"Size"}
+                  onClick={() => {
+                    console.log("clicked")
+                    props.onClick(props.label, item
+                    )
+                    props.labelOnchange(item);
+                  }}
+                    
                   key={props.item}
                   className="dropdown-item"
                 >

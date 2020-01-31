@@ -3,66 +3,63 @@ import './style.css';
 
 function ContactPage() {
 
-  const handleFormSubmit = event => {
+  const handleFormSubmit = (event) =>{
     event.preventDefault();
     window.location.reload(true);
     alert("Thank You!")
-  }
-
+}
+  
   return (
     <body>
-      <section class="hero is-info">
-        <div class="hero-body">
-        <div class="container">
-          <h1 class="title">
-            {"Kibbles and Brews"}
-          </h1>
-          <h2 class="subtitle">
-            {"Contact Us"}
-          </h2>
-        </div>
-        </div>
-      </section>
+    <div className="heading">
+      <div className="row">
+          <div className="col-8">
+          <img id="logo" src="https://tse4.mm.bing.net/th?id=OIP.lpVib3nwr4YfMvR31Yzn7gHaFj&pid=Api&P=0&w=270&h=204 " alt="logo"/>
+          <h1>Kibbles {'&'} Brews</h1>
+      </div>
+      
+      </div>
+  </div>
 
-      <section class="contact-input">
-      <div class="field">
-        <label class="label">Name</label>
-      <div class="control">
-        <input class="input" type="text"/>
+      <section className="contact-input">
+      <div className="field">
+        <label className="label">Name</label>
+      <div className="control">
+        <input className="input" type="text"/>
       </div>
       </div>
 
-      <div class="field">
-        <label class="label">Username</label>
-      <div class="control has-icons-left has-icons-right">
-        <input class="input is-success" type="text"/>
+      <div className="field">
+        <label className="label">Username</label>
+      <div className="control has-icons-left has-icons-right">
+        <input className="input is-success" type="text"/>
         
-        <span class="icon is-small is-left">
-          <i class="fas fa-user"></i>
+        <span className="icon is-small is-left">
+          <i className="fas fa-user"></i>
         </span>
       </div>
       </div>
 
-      <div class="field">
-        <label class="label">Email</label>
-      <div class="control has-icons-left has-icons-right">
-        <input class="input is-danger" type="email"/>
-        <span class="icon is-small is-left">
-          <i class="fas fa-envelope"></i>
+      <div className="field">
+        <label className="label">Email</label>
+      <div className="control has-icons-left has-icons-right">
+        <input className="input is-danger" type="email"/>
+        <span className="icon is-small is-left">
+          <i className="fas fa-envelope"></i>
         </span>
       </div>
       </div>
 
-      <div class="field">
-        <label class="label">Message</label>
-      <div class="control">
-        <textarea class="textarea" placeholder="Textarea"></textarea>
+      <div className="field">
+        <label className="label">Message</label>
+      <div className="control">
+        <textarea className="textarea" placeholder="Textarea"></textarea>
       </div>
       </div>
 
-      <div class="field is-grouped">
-        <div class="control">
-          <button class="button is-link" onClick={handleFormSubmit}>Submit</button>
+      <div className="field is-grouped">
+        <div className="control">
+          <button className="button is-link" onClick={handleFormSubmit}>Submit</button>
         </div>
       </div>
     
