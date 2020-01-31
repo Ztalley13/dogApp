@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import dummy from "../../dummy.json";
-import ImageUploader from "../ImageUploader/index"
+import ImageUploader from "../ImageUploader/index";
+import Cloudinary from "../Cloudinary"
 import "./style.css";
 
 function MemberPortfolio() {
@@ -18,13 +19,13 @@ function MemberPortfolio() {
               <div className="tile is-child box">
                 <h2 className="title">Hello, I'm {user.userName}</h2>
                 <figure className="image is-4by3">
-                  <ImageUploader />
+                  <Cloudinary />
                 </figure>
               </div>
               <div className="tile is-child box">
                 <h2 className="title">And, this is {user.petName}.</h2>
                 <figure className="image is-4by3">
-                  <ImageUploader />
+                  <Cloudinary />
                 </figure>
               </div>
             </div>

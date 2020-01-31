@@ -16,7 +16,7 @@ class ImageUploader extends Component {
   fileUploadHandler= () => {
     const fd = new FormData();
     fd.append('image', this.state.selectedFile); 
-    axios.post("/members", fd)
+    axios.post("", fd)
     .then(res => {
       console.log(res)
     })
