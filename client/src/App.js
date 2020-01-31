@@ -1,10 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Members from "./pages/Members";
+import Events from "./pages/Events";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
-import Landing from "./pages/Landing"
+import Landing from "./pages/Landing";
+import Contact from "./pages/Contact";
 
 
 const Page404 = ({ location }) => (
@@ -19,9 +21,10 @@ function App() {
       <Switch>
         <Route exact path={"/"} component={Home} />
         <Route path={"/members"} component={Members} />
+        <Route path={"/events"} component={Events} />
         <Route path={"/signup"} component={SignUp} />
+        <Route path={"/contact"} component={Contact} />
         <Route path={"/login"} component={Login} />
-        <Route path={"/home"} component={Home} />
         <Route path={"/landing"} component={Landing} />
         <Route component={Page404} />
       </Switch>

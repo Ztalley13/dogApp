@@ -5,6 +5,7 @@ var bcrypt = require("bcryptjs");
 
 const User = new Schema({
   name: { type: String, required: true, default: "" },
+  dogName: { type: String, required: true, default: "" },
   username: { type: String, required: true, default: "" },
   password: { type: String, required: true, default: "" },
   breed: { type: String, required: false, default: "" },
