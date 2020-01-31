@@ -7,6 +7,7 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Landing from "./pages/Landing";
 import Contact from "./pages/Contact";
+import Blog from "./pages/Blog";
 
 
 const Page404 = ({ location }) => (
@@ -26,6 +27,7 @@ function App() {
         <Route path={"/contact"} component={Contact} />
         <Route path={"/login"} component={Login} />
         <Route path={"/landing"} component={Landing} />
+        <Route path={"/blog"} component={Blog} />
         <Route component={Page404} />
       </Switch>
     </Router>

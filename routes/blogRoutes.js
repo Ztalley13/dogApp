@@ -1,16 +1,17 @@
 var db = require("../controllers/blogController");
+var router = require('express').Router();
 
-module.exports = function(app){
-    app.post("/blog", function(req, res){
+router.route("/blog")
+    .post(function(req, res){
         db.createBlog(req,res);
-    });
-
-    app.get("/blog", function(req, res){
+    })
+    .get(function(req, res){
         db.getBlog(req,res);
-    });
-
-    app.delete("/blog", function(req, res){
-        db.deleteBlog(req, res);
+    })
+    .delete(function(req,res){
+        db.deleteBlog(req,res);
     })
 
-}
+
+
+module.exports = router;
