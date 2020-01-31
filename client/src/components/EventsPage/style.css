@@ -24,14 +24,16 @@ html {
     background-color: rgba(144,147,142,.8);
     color: #363636;
     font-weight: bolder;
-    border: solid 1px  rgba(144,147,142,.8);
+    border: solid 1px black;
+    box-shadow: 5px 5px;
 
 }
 #options {
     background-color: rgba(144,147,142,.8);
     color: #363636;
     font-weight: bolder;
-    border: solid 1px  rgba(144,147,142,.8);
+    border: solid 1px  black;
+    box-shadow: 5px 5px;
 }
 
 #textarea, #textareaDetails {
@@ -40,9 +42,14 @@ html {
     background-color: rgba(144,147,142,.8);
     color: #363636;
     font-weight: bolder;
-    border: solid 1px  rgba(144,147,142,.8);
+    border: solid 1px  black;
+    box-shadow: 5px 5px;
 
 }
+.select:not(.is-multiple):not(.is-loading)::after{
+  border-color:black;
+}
+
 
 #submitButton {
     background-color: rgba(0,0,0,.8);
@@ -101,3 +108,4 @@ html {
     border-bottom: 1px solid black;
     text-align: center;
   }
+  

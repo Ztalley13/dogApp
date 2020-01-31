@@ -21,7 +21,7 @@ function Dropdown(props) {
         <span key={props.label}>{props.label}: </span>
         <div className={style}>
           <div className="dropdown-trigger">
-            <button
+            <button id="fields"
               onClick={toggle}
               className="button"
               aria-haspopup="true"
