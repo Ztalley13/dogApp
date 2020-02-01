@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import dummy from "../../dummy.json";
-import ImageUploader from "../ImageUploader/index";
 import Cloudinary from "../Cloudinary"
 import "./style.css";
 
 function MemberPortfolio() {
   const [user, setUser] = useState(dummy[2]);
 
+  
+
   return (
-    <body>
+    <>
       <section className="section">
         <div className="container">
           <h1 className="title" id="myPage">
@@ -64,7 +65,7 @@ function MemberPortfolio() {
           </div>
         </div>
       </section>
-    </body>
+    </>
   );
 }
 

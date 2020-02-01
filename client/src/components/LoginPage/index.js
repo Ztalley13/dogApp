@@ -133,13 +133,14 @@ function LoginForm() {
           </div>
         </div>
 
+
         <div className="columns">
           <div className="column is-half">
             <div className="notification">
               <h1 style={{ textAlign: "center" }}>Sign In</h1>
               <div className="field">
                 <p className="control">
-                  <input
+                  <input id="fields"
                     className="input"
                     type="text"
                     name="username"
@@ -152,7 +153,7 @@ function LoginForm() {
               </div>
               <div className="field">
                 <p className="control has-icons-left">
-                  <input
+                  <input id="fields"
                     className="input"
                     type="password"
                     name="password"

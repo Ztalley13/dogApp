@@ -10,7 +10,8 @@ const User = new Schema({
   dogEnergy: { type: String, required: true },
   profileImage: { type: String, required: true },
   dogImage: { type: String, required: true },
-  description: { type: String, required: true }
+  description: { type: String, required: true },
+  imageUrl: { type: String, required: false}
 });
 
 module.exports = mongoose.model("users", User);
