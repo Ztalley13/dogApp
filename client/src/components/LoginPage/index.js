@@ -26,10 +26,11 @@ function LoginForm() {
   });
 
   useEffect(() => {
-    setToken(getFromStorage("dogApp"));
+    setToken(getFromStorage("kibbles"));
     if (token) {
       //verify token
-      fetch("/api/account/verify?token" + token)
+      axios 
+      .post("/api/account/verify?token" + token)
         .then(res => res.json())
         .then(json => {
           if (json.success) {
@@ -44,6 +45,8 @@ function LoginForm() {
     }
   }, []);
 
+  //onClick and onChange functions
+
   const onChange = (e, type = "login") => {
     console.log(type, e.target.name, e.target.value);
     const f = type === "login" ? setLogin : setRegistration;
@@ -51,6 +54,13 @@ function LoginForm() {
     const { name, value } = e.target;
     f({ ...obj, [name]: value });
   };
+
+  const onClick = (type, item) => {
+    console.log(type, item);
+    setRegistration({ ...register, [type.toLowerCase()]: item });
+  };
+
+  //Sign up function
 
   const onRegister = () => {
     console.log(JSON.stringify(register));
@@ -61,6 +71,7 @@ function LoginForm() {
         if (!data.success) {
           addToast(data.message, { appearance: "error" });
         } else {
+          addToast(data.message, { appearance: "success" });
           setRegistration({
             name: "",
             dogName: "",
@@ -76,9 +87,26 @@ function LoginForm() {
       .catch(err => console.log("caught", err));
   };
 
-  const onClick = (type, item) => {
-    console.log(type, item);
-    setRegistration({ ...register, [type.toLowerCase()]: item });
+  //Sign in function
+
+  const onLogin = () => {
+    console.log("onLogin: ", JSON.stringify(login));
+    axios
+      .post("/api/account/signin", login)
+      //.then(res => res)
+      .then(({ data }) => {
+        if (!data.success) {
+          console.log({ data })
+          addToast(data.message, { appearance: "error" });
+        } else {
+          addToast(data.message, { appearance: "success" });
+          setLogin({
+            username: "",
+            password: ""
+          });
+        }
+      })
+      .catch(err => console.log("caught", err));
   };
 
   if (loading) {
@@ -105,10 +133,11 @@ function LoginForm() {
           </div>
         </div>
 
-        <div className="tile is-ancestor">
-          <div className="tile" >
-            <div className="notification" id="signInNoti">
-              <h1>Sign In</h1>
+
+        <div className="columns">
+          <div className="column is-half">
+            <div className="notification">
+              <h1 style={{ textAlign: "center" }}>Sign In</h1>
               <div className="field">
                 <p className="control">
                   <input id="fields"
@@ -118,6 +147,7 @@ function LoginForm() {
                     placeholder="Username"
                     onChange={onChange}
                     value={login.username}
+                    style={{ width: "100%" }}
                   />
                 </p>
               </div>
@@ -130,6 +160,7 @@ function LoginForm() {
                     placeholder="Password"
                     onChange={onChange}
                     value={login.password}
+                    style={{ width: "100%" }}
                   />
                   <span className="icon is-small is-left">
                     <i className="fas fa-lock"></i>
@@ -138,12 +169,14 @@ function LoginForm() {
               </div>
               <div className="field">
                 <p className="control">
-                  <button className="button is-dark">Login</button>
+                  <button className="button is-dark" onSubmit={onClick} onClick={onLogin}>
+                    Login
+                  </button>
                 </p>
               </div>
             </div>
           </div>
-          <div class="tile">
+          <div className="column is-half">
             <SignUp
               {...register}
               onSubmit={onRegister}

@@ -81,11 +81,11 @@ router.route("/register").post((req, res) => {
 
 //Signin
 
-router.route("/signing").post((req, res) => {
+router.route("/signin").post((req, res) => {
   const { body } = req;
-  let { userName, password } = body;
+  let { username, password } = body;
 
-  if (!userName) {
+  if (!username) {
     return res.send({
       success: false,
       message: "Error:  Username cannot be blank."
@@ -99,7 +99,7 @@ router.route("/signing").post((req, res) => {
   }
   User.find(
     {
-      userName: userName
+      username: username
     },
     (err, users) => {
       if (err) {
@@ -116,7 +116,7 @@ router.route("/signing").post((req, res) => {
       }
 
       const user = users[0];
-      if (!user.validPassword(password)) {
+      if (!user.password) {
         return res.send({
           success: false,
           message: "Error: Invalid password"
