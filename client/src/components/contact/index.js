@@ -1,12 +1,20 @@
 import React from 'react';
+// import { useToasts } from "react-toast-notifications";
 import './style.css';
 
 function ContactPage() {
 
-  const handleFormSubmit = (event) =>{
+  // const { addToast } = useToasts();
+
+  const handleFormSubmit = (event) => {
     event.preventDefault();
     window.location.reload(true);
-    alert("Thank You!")
+    // if(event) {
+    // addToast("Thank you for contacting Kibbles and Brews", {
+    //   appearance: "success", 
+    //   autoDismiss: true 
+    // });
+    // alert("Thank You!")
 }
   
   return (

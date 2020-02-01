@@ -29,8 +29,8 @@ function LoginForm() {
     setToken(getFromStorage("kibbles"));
     if (token) {
       //verify token
-      axios 
-      .post("/api/account/verify?token" + token)
+      axios
+        .post("/api/account/verify?token" + token)
         .then(res => res.json())
         .then(json => {
           if (json.success) {
@@ -69,9 +69,9 @@ function LoginForm() {
       //.then(res => res)
       .then(({ data }) => {
         if (!data.success) {
-          addToast(data.message, { appearance: "error" });
+          addToast(data.message, { appearance: "error", autoDismiss: true });
         } else {
-          addToast(data.message, { appearance: "success" });
+          addToast(data.message, { appearance: "success", autoDismiss: true });
           setRegistration({
             name: "",
             dogName: "",
@@ -96,10 +96,10 @@ function LoginForm() {
       //.then(res => res)
       .then(({ data }) => {
         if (!data.success) {
-          console.log({ data })
-          addToast(data.message, { appearance: "error" });
+          console.log({ data });
+          addToast(data.message, { appearance: "error", autoDismiss: true });
         } else {
-          addToast(data.message, { appearance: "success" });
+          addToast(data.message, { appearance: "success", autoDismiss: true });
           setLogin({
             username: "",
             password: ""
@@ -133,14 +133,14 @@ function LoginForm() {
           </div>
         </div>
 
-
         <div className="columns">
           <div className="column is-half">
             <div className="notification">
               <h1 style={{ textAlign: "center" }}>Sign In</h1>
               <div className="field">
                 <p className="control">
-                  <input id="fields"
+                  <input
+                    id="fields"
                     className="input"
                     type="text"
                     name="username"
@@ -153,7 +153,8 @@ function LoginForm() {
               </div>
               <div className="field">
                 <p className="control has-icons-left">
-                  <input id="fields"
+                  <input
+                    id="fields"
                     className="input"
                     type="password"
                     name="password"
@@ -169,7 +170,11 @@ function LoginForm() {
               </div>
               <div className="field">
                 <p className="control">
-                  <button className="button is-dark" onSubmit={onClick} onClick={onLogin}>
+                  <button
+                    className="button is-dark"
+                    onSubmit={onClick}
+                    onClick={onLogin}
+                  >
                     Login
                   </button>
                 </p>

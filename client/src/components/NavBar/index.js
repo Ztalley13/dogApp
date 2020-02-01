@@ -76,7 +76,6 @@ function NavBar() {
                       Sign Up/Login
                     </div>
                   </div></button></a>
-                {/* <a href="/Login"><button id="log-in">Login</button></a> */}
               </a>
             </div>
           </div>

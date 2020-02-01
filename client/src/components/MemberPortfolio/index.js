@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import dummy from "../../dummy.json";
+// import dummy from "../../dummy.json";
 import Cloudinary from "../Cloudinary"
+import login from "../LoginPage";
 import "./style.css";
 
 function MemberPortfolio() {
-  const [user, setUser] = useState(dummy[2]);
+  const [user, setUser] = useState();
 
   
 
@@ -18,7 +19,7 @@ function MemberPortfolio() {
           <div className="tile is-ancestor">
             <div className="tile is-4 is-vertical is-parent">
               <div className="tile is-child box">
-                <h2 className="title">Hello, I'm {user.userName}</h2>
+                <h2 className="title">Hello, I'm {user.username}</h2>
                 <figure className="image is-4by3">
                   <Cloudinary />
                 </figure>
