@@ -1,7 +1,10 @@
 import React from "react";
 import Dropdown from "../Dropdown";
+
+
 let labelSize = "By Weight";
 let Levels = "Energy Level";
+
 function SignUpForm(props) {
   
   function labelOnchange(e) {
@@ -9,9 +12,8 @@ function SignUpForm(props) {
   }
   return (
     <div>
-      <div className="container" id="container">
         <div className="notification">
-          <h1>Sign Up</h1>
+          <h1 style={{textAlign: "center"}}>Sign Up</h1>
           <div className="field">
             <p className="control">
               <span>Name: </span>
@@ -22,6 +24,7 @@ function SignUpForm(props) {
                 type="name"
                 name="name"
                 placeholder="Name"
+                style={{width: "100%"}}
               />
             </p>
           </div>
@@ -35,6 +38,7 @@ function SignUpForm(props) {
                 type="text"
                 name="username"
                 placeholder="Username"
+                style={{width: "100%"}}
               />
             </p>
           </div>
@@ -48,6 +52,7 @@ function SignUpForm(props) {
                 type="password"
                 name="password"
                 placeholder="Password"
+                style={{width: "100%"}}
               />
             </p>
           </div>
@@ -61,6 +66,7 @@ function SignUpForm(props) {
                 type="text"
                 name="dogName"
                 placeholder="Dog Name"
+                style={{width: "100%"}}
               />
             </p>
           </div>
@@ -74,6 +80,7 @@ function SignUpForm(props) {
                 name="breed"
                 type="text"
                 placeholder="Breed"
+                style={{width: "100%"}}
               />
             </p>
           </div>
@@ -107,6 +114,7 @@ function SignUpForm(props) {
                 name="description"
                 type="text"
                 placeholder="Tell us about you and your dog!"
+                style={{width: "100%"}}
               />
             </p>
           </div>
@@ -119,7 +127,6 @@ function SignUpForm(props) {
           </div>
           <div className="field"></div>
         </div>
-      </div>
     </div>
   );
 }
