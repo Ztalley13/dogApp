@@ -8,7 +8,7 @@ class Home extends Component {
     render() {
         return (
             <div>
-            <NavBar />
+            <NavBar {...this.props} />
             <HomeForm />
             </div>
         )

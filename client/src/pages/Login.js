@@ -6,7 +6,7 @@ class Login extends Component {
   render() {
     return (
       <div>
-        <NavBar />
+         <NavBar {...this.props} />
         <LoginForm />
       </div>
     );

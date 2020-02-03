@@ -3,20 +3,20 @@ import "./style.css";
 import api from "../../utils/API";
 
 function EventsPage() {
-    const [blogState, changeBlog] = useState({optionsBox:"Meet Up"});
+    const [blogState, changeBlog] = useState({ optionsBox: "Meet Up" });
 
-    function submitHandler(data){
+    function submitHandler(data) {
         api.submitBlog(blogState)
-        .then(res =>console.log(res))
-    }    
+            .then(res => console.log(res))
+    }
     const onChange = (e) => {
         const { name, value } = e.target;
-        changeBlog({...blogState, [name]: value});
-      };   
+        changeBlog({ ...blogState, [name]: value });
+    };
     return (
-        <body>
+        <div>
             <div className="container" id="container">
-            {/* <div className="tile is-ancestor">
+                {/* <div className="tile is-ancestor">
             <div className="tile is-4 is-vertical is-parent">
               <div className="tile is-child box">
               <h2 className="title">Plan a Meet-Up,
@@ -26,8 +26,8 @@ function EventsPage() {
               </div>
               </div>
                 </div> */}
-              <h1 className="post-header">Create A Post</h1>
-              <div className="field">
+                <h1 className="post-header">Create A Post</h1>
+                <div className="field">
                     <label className="label">Subject</label>
                     <div className="control" id="control">
                         <div className="select">
@@ -43,7 +43,7 @@ function EventsPage() {
                 <div className="field">
                     <label className="label">Name</label>
                     <div className="control">
-                        <input className="input" name="nameInput" id="nameInput" type="text" onChange={onChange}/>
+                        <input className="input" name="nameInput" id="nameInput" type="text" onChange={onChange} />
                     </div>
                 </div>
 
@@ -62,15 +62,15 @@ function EventsPage() {
                             <div className="c3"></div>
                             <div className="c4"></div>
                             <div className="b1">
-                                <div class="b2">
+                                <div className="b2">
                                     Submit
-      </div>
+                                </div>
                             </div>
                         </button>
                     </div>
                 </div>
             </div>
-        </body >
+        </div >
 
     )
 }
