@@ -19,7 +19,6 @@ function SignUpForm(props) {
           <span>Name: </span>
             <p className="control">
 
-              <span>Name: </span>
               <input id="fields3"
 
                 value={props.name}
@@ -33,9 +32,9 @@ function SignUpForm(props) {
             </p>
           </div>
           <div className="field">
-
+          <span>Username: </span>
             <p className="control">
-              <span>Username: </span>
+              
               <input id="fields4"
 
                 onChange={e => props.onChange(e, "register")}
@@ -46,15 +45,12 @@ function SignUpForm(props) {
                 placeholder="Username"
                 style={{width: "46%"}}
               />
-              <span className="icon is-small is-left">
-                <i className="fas fa-user"></i>
-              </span>
+              
             </p>
           </div>
           <div className="field">
-
+          <span>Password: </span>
             <p className="control">
-              <span>Password: </span>
               <input id="fields5"
 
                 onChange={e => props.onChange(e, "register")}
@@ -65,9 +61,8 @@ function SignUpForm(props) {
                 placeholder="Password"
                 style={{width: "46%"}}
               />
-              <span className="icon is-small is-left">
-                <i className="fas fa-lock"></i>
-              </span>
+             
+              
             </p>
           </div>
           <div className="field">
@@ -75,7 +70,7 @@ function SignUpForm(props) {
           <span>Dog Name: </span>
             <p className="control">
 
-              <span>Dog Name: </span>
+              
               <input id="fields6"
 
                 onChange={e => props.onChange(e, "register")}
@@ -93,7 +88,7 @@ function SignUpForm(props) {
           <span>Breed: </span>
             <p className="control">
 
-              <span>Breed: </span>
+             
               <input id="fields7"
 
                 onChange={e => props.onChange(e, "register")}

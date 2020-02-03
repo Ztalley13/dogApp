@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-// import Logout from "../Logout";
+import Logout from "../Logout";
 
 function NavBar() {
   return (
@@ -72,7 +72,7 @@ function NavBar() {
                       Sign Up/Login
                     </div>
                   </div></button></a>
-                  {/* <Logout /> */}
+                  <Logout />
               </div>
             </div>
           </div>

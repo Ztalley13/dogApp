@@ -150,9 +150,7 @@ function LoginForm() {
                     value={login.username}
                     style={{ width: "46%" }}
                   />
-                  <span className="icon is-small is-left">
-                    <i className="fas fa-user"></i>
-                  </span>
+                 
                 </p>
               </div>
               <div className="field">
