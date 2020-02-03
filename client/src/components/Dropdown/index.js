@@ -6,6 +6,14 @@ function Dropdown(props) {
   function toggle() {
     setOpen(!open);
   }
+  let labelSize = "By Weight";
+  let Levels = "Energy Level";
+
+  function labelOnchange(e) {
+    labelSize = e;
+  }
+
+
 
   const style = open ? "dropdown is-active" : "dropdown";
   const menuStyle = open ? "dropdown-menu block" : "dropdown-menu";
@@ -33,8 +41,9 @@ function Dropdown(props) {
               {props.items.map(item => (
                 <div
                   className={"dropdown-item"}
-                  name={"Size"}
+                  name={props.label}
                   onClick={() => {
+                    toggle()
                     console.log("clicked")
                     props.onClick(props.label, item
                     )

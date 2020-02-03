@@ -10,6 +10,11 @@ function SignUpForm(props) {
   function labelOnchange(e) {
     labelSize = e;
   }
+  function labelOnchange2(e) {
+    Levels = e;
+  }
+
+
   return (
     <div>
         <div className="notification">
@@ -119,9 +124,10 @@ function SignUpForm(props) {
               "X-Large: Over 100lbs."
             ]}
           />
-          <Dropdown
+          <Dropdown 
             onClick={props.onClick}
             onChange={props.onChange}
+            labelOnchange={labelOnchange2}
             label={"Energy"}
             buttonLabel={Levels}
             items={["Low", "Moderate", "High"]}
