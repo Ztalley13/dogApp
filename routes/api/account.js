@@ -12,13 +12,13 @@ router.route("/register").post((req, res) => {
   console.log("BODY: ", body);
 
   if (!name) {
-     res.send({
+    res.send({
       success: false,
       message: "Error:  Name cannot be blank."
     });
   }
   if (!username) {
-     res.send({
+    res.send({
       success: false,
       message: "Error:  Username cannot be blank."
     });
@@ -30,7 +30,7 @@ router.route("/register").post((req, res) => {
     });
   }
   if (!description) {
-   res.send({
+    res.send({
       success: false,
       message: "Error:  Description cannot be blank."
     });
@@ -49,7 +49,7 @@ router.route("/register").post((req, res) => {
         });
       } else if (previousUsers.length > 0) {
         // alert("Username already exists, please try again.");
-      res.send({
+        res.send({
           success: false,
           message: "Error:  Username already exists."
         });
@@ -148,6 +148,23 @@ router.route("/signin").post((req, res) => {
       }
     }
   );
+});
+
+router.route("/member").get((req, res) => {
+  console.log("member route hit");
+  UserSession.find({}, (err, data) => {
+    if (err) {
+      console.log(err);
+      return false;
+    }
+    User.findOne({ _id: data[0].userId }, (err, doc) => {
+      if (err) {
+        console.log(err);
+        return false;
+      }
+      res.send(doc);
+    });
+  });
 });
 
 // router.route("/verify").get((req, res) => {

@@ -18,7 +18,7 @@ function SignUpForm(props) {
           <div className="field">
             <p className="control">
               <span>Name: </span>
-              <input id="fields"
+              <input id="fields3"
                 value={props.name}
                 onChange={e => props.onChange(e, "register")}
                 className="input"
@@ -32,7 +32,7 @@ function SignUpForm(props) {
           <div className="field">
             <p className="control">
               <span>Username: </span>
-              <input id="fields"
+              <input id="fields4"
                 onChange={e => props.onChange(e, "register")}
                 value={props.username}
                 className="input"
@@ -46,7 +46,7 @@ function SignUpForm(props) {
           <div className="field">
             <p className="control">
               <span>Password: </span>
-              <input id="fields"
+              <input id="fields5"
                 onChange={e => props.onChange(e, "register")}
                 value={props.password}
                 className="input"
@@ -60,7 +60,7 @@ function SignUpForm(props) {
           <div className="field">
             <p className="control">
               <span>Dog Name: </span>
-              <input id="fields"
+              <input id="fields6"
                 onChange={e => props.onChange(e, "register")}
                 value={props.dogName}
                 className="input"
@@ -74,7 +74,7 @@ function SignUpForm(props) {
           <div className="field">
             <p className="control">
               <span>Breed: </span>
-              <input id="fields"
+              <input id="fields7"
                 onChange={e => props.onChange(e, "register")}
                 value={props.breed}
                 className="input"

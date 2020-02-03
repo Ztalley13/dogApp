@@ -140,7 +140,7 @@ function LoginForm() {
               <div className="field">
                 <p className="control">
                   <input
-                    id="fields"
+                    id="fields1"
                     className="input"
                     type="text"
                     name="username"
@@ -154,7 +154,7 @@ function LoginForm() {
               <div className="field">
                 <p className="control has-icons-left">
                   <input
-                    id="fields"
+                    id="fields2"
                     className="input"
                     type="password"
                     name="password"
@@ -183,6 +183,7 @@ function LoginForm() {
           </div>
           <div className="column is-half">
             <SignUp
+              key={register.username}
               {...register}
               onSubmit={onRegister}
               onChange={onChange}

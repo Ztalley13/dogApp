@@ -65,18 +65,18 @@ function NavBar() {
         <div className="navbar-end">
           <div className="navbar-item">
             <div className="buttons">
-              <a className="button is-dark" id="signButton">
+              <div className="button is-dark" id="signButton">
                 <a href="/login"><button id="sign-up">
                   <div className="c1" id="c1"></div>
                   <div className="c2" id="c2"></div>
                   <div className="c3" id="c3"></div>
                   <div className="c4" id="c4"></div>
                   <div className="b1" id="b1">
-                    <div class="b2" id="b2">
+                    <div className="b2" id="b2">
                       Sign Up/Login
                     </div>
                   </div></button></a>
-              </a>
+              </div>
             </div>
           </div>
         </div>
