@@ -18,8 +18,10 @@ function SignUpForm(props) {
           <div className="field">
           <span>Name: </span>
             <p className="control">
-              
-              <input id="fields"
+
+              <span>Name: </span>
+              <input id="fields3"
+
                 value={props.name}
                 onChange={e => props.onChange(e, "register")}
                 className="input"
@@ -31,10 +33,11 @@ function SignUpForm(props) {
             </p>
           </div>
           <div className="field">
-            
-          <span>Username: </span>
-            <p className="control has-icons-left">
-              <input id="fields"
+
+            <p className="control">
+              <span>Username: </span>
+              <input id="fields4"
+
                 onChange={e => props.onChange(e, "register")}
                 value={props.username}
                 className="input"
@@ -49,10 +52,11 @@ function SignUpForm(props) {
             </p>
           </div>
           <div className="field">
-            
-          <span>Password: </span>
-            <p className="control has-icons-left">
-              <input id="fields"
+
+            <p className="control">
+              <span>Password: </span>
+              <input id="fields5"
+
                 onChange={e => props.onChange(e, "register")}
                 value={props.password}
                 className="input"
@@ -70,7 +74,10 @@ function SignUpForm(props) {
             
           <span>Dog Name: </span>
             <p className="control">
-              <input id="fields"
+
+              <span>Dog Name: </span>
+              <input id="fields6"
+
                 onChange={e => props.onChange(e, "register")}
                 value={props.dogName}
                 className="input"
@@ -85,7 +92,10 @@ function SignUpForm(props) {
             
           <span>Breed: </span>
             <p className="control">
-              <input id="fields"
+
+              <span>Breed: </span>
+              <input id="fields7"
+
                 onChange={e => props.onChange(e, "register")}
                 value={props.breed}
                 className="input"

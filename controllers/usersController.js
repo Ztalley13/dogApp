@@ -87,8 +87,7 @@ updateUser = async (req, res) => {
         message: 'User not found',
       })
     }
-    user.name = body.name
-    user.userName = body.userName
+    user.username = body.username
     user.password = body.password
     user
       .save()
