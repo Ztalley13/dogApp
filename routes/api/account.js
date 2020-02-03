@@ -201,40 +201,40 @@ router.route("/member").get((req, res) => {
 //   );
 // });
 
-// router.route("/logout").get((req, res) => {
-//   const { query } = req;
-//   const { token } = query;
+router.route("/logout").get((req, res) => {
+  const { query } = req;
+  const { token } = query;
+console.log("logout route hit")
+  // UserSession.findOneAndUpdate(
+  //   {
+  //     _id: token,
+  //     isDeleted: false
+  //   },
+  //   {
+  //     $set: { isDeleted: true }
+  //   },
+  //   null,
+  //   (err, sessions) => {
+  //     if (err) {
+  //       return res.send({
+  //         success: false,
+  //         message: "Error: server error"
+  //       });
+  //     }
 
-//   UserSession.findOneAndUpdate(
-//     {
-//       _id: token,
-//       isDeleted: false
-//     },
-//     {
-//       $set: { isDeleted: true }
-//     },
-//     null,
-//     (err, sessions) => {
-//       if (err) {
-//         return res.send({
-//           success: false,
-//           message: "Error: server error"
-//         });
-//       }
-
-//       if (sessions.length != 1) {
-//         return res.send({
-//           success: false,
-//           message: "Error: Invalid"
-//         });
-//       } else {
-//         return res.send({
-//           success: true,
-//           message: "Good"
-//         });
-//       }
-//     }
-//   );
-// });
+  //     if (sessions.length != 1) {
+  //       return res.send({
+  //         success: false,
+  //         message: "Error: Invalid"
+  //       });
+  //     } else {
+  //       return res.send({
+  //         success: true,
+  //         message: "Good"
+  //       });
+  //     }
+  //   }
+  // );
+});
 
 module.exports = router;
