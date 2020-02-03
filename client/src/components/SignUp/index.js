@@ -16,8 +16,9 @@ function SignUpForm(props) {
           <h1 style={{textAlign: "center"}}>Sign Up</h1>
 
           <div className="field">
+          <span>Name: </span>
             <p className="control">
-              <span>Name: </span>
+              
               <input id="fields"
                 value={props.name}
                 onChange={e => props.onChange(e, "register")}
@@ -25,13 +26,14 @@ function SignUpForm(props) {
                 type="name"
                 name="name"
                 placeholder="Name"
-                style={{width: "100%"}}
+                style={{width: "46%"}}
               />
             </p>
           </div>
           <div className="field">
-            <p className="control">
-              <span>Username: </span>
+            
+          <span>Username: </span>
+            <p className="control has-icons-left">
               <input id="fields"
                 onChange={e => props.onChange(e, "register")}
                 value={props.username}
@@ -39,13 +41,17 @@ function SignUpForm(props) {
                 type="text"
                 name="username"
                 placeholder="Username"
-                style={{width: "100%"}}
+                style={{width: "46%"}}
               />
+              <span className="icon is-small is-left">
+                <i className="fas fa-user"></i>
+              </span>
             </p>
           </div>
           <div className="field">
-            <p className="control">
-              <span>Password: </span>
+            
+          <span>Password: </span>
+            <p className="control has-icons-left">
               <input id="fields"
                 onChange={e => props.onChange(e, "register")}
                 value={props.password}
@@ -53,13 +59,17 @@ function SignUpForm(props) {
                 type="password"
                 name="password"
                 placeholder="Password"
-                style={{width: "100%"}}
+                style={{width: "46%"}}
               />
+              <span className="icon is-small is-left">
+                <i className="fas fa-lock"></i>
+              </span>
             </p>
           </div>
           <div className="field">
+            
+          <span>Dog Name: </span>
             <p className="control">
-              <span>Dog Name: </span>
               <input id="fields"
                 onChange={e => props.onChange(e, "register")}
                 value={props.dogName}
@@ -67,13 +77,14 @@ function SignUpForm(props) {
                 type="text"
                 name="dogName"
                 placeholder="Dog Name"
-                style={{width: "100%"}}
+                style={{width: "46%"}}
               />
             </p>
           </div>
           <div className="field">
+            
+          <span>Breed: </span>
             <p className="control">
-              <span>Breed: </span>
               <input id="fields"
                 onChange={e => props.onChange(e, "register")}
                 value={props.breed}
@@ -81,7 +92,7 @@ function SignUpForm(props) {
                 name="breed"
                 type="text"
                 placeholder="Breed"
-                style={{width: "100%"}}
+                style={{width: "46%"}}
               />
             </p>
           </div>
@@ -106,8 +117,9 @@ function SignUpForm(props) {
             items={["Low", "Moderate", "High"]}
           />
           <div className="field">
+            
+          <span>Description: </span>
             <p className="control">
-              <span>Description: </span>
               <input id="fields"
                 onChange={e => props.onChange(e, "register")}
                 value={props.description}
@@ -115,7 +127,7 @@ function SignUpForm(props) {
                 name="description"
                 type="text"
                 placeholder="Tell us about you and your dog!"
-                style={{width: "100%"}}
+                style={{width: "46%"}}
               />
             </p>
           </div>
