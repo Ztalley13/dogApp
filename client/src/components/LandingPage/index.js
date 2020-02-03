@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import dummy from "../../dummy.json";
+import React from "react";
 import "./style.css";
 
 function LandingPage(props) {
@@ -11,7 +10,7 @@ function LandingPage(props) {
             <figure className="image is-4by3" id="cardImage">
               <img
                 src={props.profileImage}
-                alt="my image"
+                alt="Profile"
                 id="cardImage"
               />
             </figure>
@@ -22,7 +21,7 @@ function LandingPage(props) {
                 <figure className="image is-28x10" id="dogImage">
                   <img
                     src={props.dogImage}
-                    alt="dog image"
+                    alt="Dog"
                     id="dogImage"
                   />
                 </figure>

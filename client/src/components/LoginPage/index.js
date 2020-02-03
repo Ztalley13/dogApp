@@ -4,6 +4,7 @@ import "./styles.css";
 import { getFromStorage, setInStorage } from "../../utils/storage";
 import SignUp from "../SignUp";
 import axios from "axios";
+import { Redirect } from "react-router";
 
 function LoginForm() {
   const [loading, setLoading] = useState(true);
@@ -13,6 +14,7 @@ function LoginForm() {
     password: ""
   });
   const [token, setToken] = useState(null);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const [register, setRegistration] = useState({
     name: "",
@@ -99,11 +101,14 @@ function LoginForm() {
           console.log({ data });
           addToast(data.message, { appearance: "error", autoDismiss: true });
         } else {
-          addToast(data.message, { appearance: "success", autoDismiss: true });
+          addToast(data.message, { appearance: "success", autoDismiss: true }, () => {
+            setTimeout( ()=> setIsAuthenticated(true), 1000);
+          });
           setLogin({
             username: "",
             password: ""
           });
+
         }
       })
       .catch(err => console.log("caught", err));
@@ -118,6 +123,10 @@ function LoginForm() {
   }
 
   if (!token) {
+    console.log(isAuthenticated);
+    if (isAuthenticated) {
+      return <Redirect to="/members" />;
+    }
     return (
       <div>
         <div className="heading">

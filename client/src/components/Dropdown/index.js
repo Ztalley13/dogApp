@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 import "./style.css";
-import onClickOutside from "react-onclickoutside";
 
 function Dropdown(props) {
   const [open, setOpen] = useState(false);
   function toggle() {
     setOpen(!open);
   }
-  //   Dropdown.handleClickOutside = () => {
-  //     console.log(props.label, "click outside");
-  //     setOpen(false);
-  //   };
+  let labelSize = "By Weight";
+  let Levels = "Energy Level";
+
+  function labelOnchange(e) {
+    labelSize = e;
+  }
+
+
 
   const style = open ? "dropdown is-active" : "dropdown";
   const menuStyle = open ? "dropdown-menu block" : "dropdown-menu";
@@ -37,16 +40,16 @@ function Dropdown(props) {
             <div className="dropdown-content">
               {props.items.map(item => (
                 <div
-                  className={"Size"}
+                  className={"dropdown-item"}
+                  name={props.label}
                   onClick={() => {
+                    toggle()
                     console.log("clicked")
                     props.onClick(props.label, item
                     )
                     props.labelOnchange(item);
                   }}
-                    
                   key={props.item}
-                  className="dropdown-item"
                 >
                   <p>
                     <strong>{item}</strong>
