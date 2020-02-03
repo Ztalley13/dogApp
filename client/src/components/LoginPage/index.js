@@ -138,6 +138,7 @@ function LoginForm() {
             <div className="notification">
               <h1 style={{ textAlign: "center" }}>Sign In</h1>
               <div className="field">
+
                 <p className="control">
                   <input
                     id="fields1"
@@ -147,8 +148,11 @@ function LoginForm() {
                     placeholder="Username"
                     onChange={onChange}
                     value={login.username}
-                    style={{ width: "100%" }}
+                    style={{ width: "46%" }}
                   />
+                  <span className="icon is-small is-left">
+                    <i className="fas fa-user"></i>
+                  </span>
                 </p>
               </div>
               <div className="field">
@@ -161,7 +165,7 @@ function LoginForm() {
                     placeholder="Password"
                     onChange={onChange}
                     value={login.password}
-                    style={{ width: "100%" }}
+                    style={{ width: "46%" }}
                   />
                   <span className="icon is-small is-left">
                     <i className="fas fa-lock"></i>

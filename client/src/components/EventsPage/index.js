@@ -26,15 +26,8 @@ function EventsPage() {
               </div>
               </div>
                 </div> */}
-
-                <div className="field">
-                    <label className="label">Name</label>
-                    <div className="control">
-                        <input className="input" name="nameInput" id="nameInput" type="text" placeholder="Name" onChange={onChange}/>
-                    </div>
-                </div>
-
-                <div className="field">
+              <h1 className="post-header">Create A Post</h1>
+              <div className="field">
                     <label className="label">Subject</label>
                     <div className="control" id="control">
                         <div className="select">
@@ -48,9 +41,16 @@ function EventsPage() {
                 </div>
 
                 <div className="field">
+                    <label className="label">Name</label>
+                    <div className="control">
+                        <input className="input" name="nameInput" id="nameInput" type="text" onChange={onChange}/>
+                    </div>
+                </div>
+
+                <div className="field">
                     <label className="label">Details</label>
                     <div className="control">
-                        <textarea className="textarea" name="textareaInput" id="textareaDetails" placeholder="Details" onChange={onChange}></textarea>
+                        <textarea className="textarea" name="textareaInput" id="textareaDetails" onChange={onChange}></textarea>
                     </div>
                 </div>
 

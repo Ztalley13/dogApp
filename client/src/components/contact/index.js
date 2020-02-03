@@ -21,15 +21,11 @@ function ContactPage() {
     <body>
     <div className="heading">
       <div className="row">
-          <div className="col-8">
-          <img id="logo" src="https://tse4.mm.bing.net/th?id=OIP.lpVib3nwr4YfMvR31Yzn7gHaFj&pid=Api&P=0&w=270&h=204 " alt="logo"/>
-          <h1>Kibbles {'&'} Brews</h1>
-      </div>
-      
       </div>
   </div>
 
       <section className="contact-input">
+      <h1 className="contact-header">Contact Us!</h1>
       <div className="field">
         <label className="label">Name</label>
       <div className="control">
@@ -61,13 +57,13 @@ function ContactPage() {
       <div className="field">
         <label className="label">Message</label>
       <div className="control">
-        <textarea className="textarea" placeholder="Textarea"></textarea>
+        <textarea className="textarea" placeholder="Enter a message!"></textarea>
       </div>
       </div>
 
       <div className="field is-grouped">
         <div className="control">
-          <button className="button is-link" onClick={handleFormSubmit}>Submit</button>
+          <button className="button is-dark" onClick={handleFormSubmit}>Submit</button>
         </div>
       </div>
     

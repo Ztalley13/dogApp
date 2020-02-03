@@ -1,9 +1,9 @@
 import React from "react";
 import "./style.css";
 
+
 function HomeForm() {
   return (
-    <body>
       <div className="heading">
         <div className="row">
           <div className="col-8">
@@ -40,6 +40,7 @@ function HomeForm() {
               </a>
             </p>
           </div>
+
         </div>
       </div>
 
