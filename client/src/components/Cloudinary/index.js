@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
-// import PhotoCamera from '@material-ui/icons/PhotoCamera';
+import dummy from "../../dummy.json";
 
 export default function Main() {
-    const [image, setImage] = useState({url: ""});
+
+    const [image, setImage] = useState();
     const uploadImage = () => {
-        console.log(image)
+			console.log(image)
+			console.log(dummy)
+        //({imageUrl: image.url})
     }
     const uploadWidget = () => {
         const config = {
@@ -16,16 +19,18 @@ export default function Main() {
             if (error) {
                 console.log(error);
             } else {
-                setImage(result[0]);
+                console.log(result)
+                setImage(result[0].url);
                 uploadImage();
             }
         });
     };
     return (
         <div className="main">
-            <div className="upload">
+            <img alt="Main" src={image} width="150" height="150" />
+            <div className="upload" style={{"position": "absolute", "zIndex": "1"}}>
                 <button onClick={uploadWidget} className="upload-button">
-                    Button
+                    Upload Image
                 </button>
             </div>
         </div>

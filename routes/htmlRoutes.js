@@ -4,6 +4,7 @@ var isAuthenticated = require("../kibbles/config/isauthenticated");
 module.exports = function (app) {
 
   app.get("/", function (req, res) {
+    console.log("/ route hit");
     // If the user already has an account send them to the members page
     if (req.user) {
       res.redirect("/index");
@@ -20,7 +21,7 @@ module.exports = function (app) {
   });
 
   app.get("/index", isAuthenticated, function (req, res) {
-    res.render("index", null);
+    res.sendFile(path.join(__dirname+"client/build/index.html"));
   });
 
   app.get("/hosting", isAuthenticated, function (req, res) {

@@ -124,10 +124,14 @@ body {
   color: #363636;
 }
 
-#container {
-  background-color: rgba(144, 147, 142, 0.8);
+#container{
   color: #363636;
   font-weight: bolder;
+}
+#signInNoti{
+  background-color:rgba(144, 147, 142, 0.8);
+  max-height: 300px;
+  min-height: 40px;
 }
 
 h1 {

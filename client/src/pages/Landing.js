@@ -12,7 +12,7 @@ class Landing extends Component {
   render() {
     return (
       <div>
-        <NavBar />
+        <NavBar {...this.props} />
         <div className="columns is-multiline">
         {this.state.dummy.map(o => 
         (<LandingForm 

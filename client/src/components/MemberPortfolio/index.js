@@ -1,14 +1,26 @@
-import React, { useState } from "react";
-import dummy from "../../dummy.json";
-import ImageUploader from "../ImageUploader/index";
-import Cloudinary from "../Cloudinary"
+import React, { useState, useEffect } from "react";
+// import dummy from "../../dummy.json";
+import Cloudinary from "../Cloudinary";
+import login from "../LoginPage";
 import "./style.css";
+import axios from "axios";
 
 function MemberPortfolio() {
-  const [user, setUser] = useState(dummy[2]);
+  const [user, setUser] = useState({
+    name: "",
+    dogName: "",
+    description: ""
+  });
+
+  useEffect(() => {
+    axios.get("/api/account/member").then(response => {
+      const { name, dogName, description } = response.data;
+      setUser({ name, dogName, description });
+    });
+  }, []);
 
   return (
-    <body>
+    <>
       <section className="section">
         <div className="container">
           <h1 className="title" id="myPage">
@@ -17,13 +29,13 @@ function MemberPortfolio() {
           <div className="tile is-ancestor">
             <div className="tile is-4 is-vertical is-parent">
               <div className="tile is-child box">
-                <h2 className="title">Hello, I'm {user.userName}</h2>
+                <h2 className="title">Hello, I'm {user.name}</h2>
                 <figure className="image is-4by3">
                   <Cloudinary />
                 </figure>
               </div>
               <div className="tile is-child box">
-                <h2 className="title">And, this is {user.petName}.</h2>
+                <h2 className="title">And, this is {user.dogName}</h2>
                 <figure className="image is-4by3">
                   <Cloudinary />
                 </figure>
@@ -64,7 +76,7 @@ function MemberPortfolio() {
           </div>
         </div>
       </section>
-    </body>
+    </>
   );
 }
 

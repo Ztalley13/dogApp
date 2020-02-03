@@ -4,6 +4,7 @@ import "./styles.css";
 import { getFromStorage, setInStorage } from "../../utils/storage";
 import SignUp from "../SignUp";
 import axios from "axios";
+import { Redirect } from "react-router";
 
 function LoginForm() {
   const [loading, setLoading] = useState(true);
@@ -13,6 +14,7 @@ function LoginForm() {
     password: ""
   });
   const [token, setToken] = useState(null);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const [register, setRegistration] = useState({
     name: "",
@@ -26,10 +28,11 @@ function LoginForm() {
   });
 
   useEffect(() => {
-    setToken(getFromStorage("dogApp"));
+    setToken(getFromStorage("kibbles"));
     if (token) {
       //verify token
-      fetch("/api/account/verify?token" + token)
+      axios
+        .post("/api/account/verify?token" + token)
         .then(res => res.json())
         .then(json => {
           if (json.success) {
@@ -44,6 +47,8 @@ function LoginForm() {
     }
   }, []);
 
+  //onClick and onChange functions
+
   const onChange = (e, type = "login") => {
     console.log(type, e.target.name, e.target.value);
     const f = type === "login" ? setLogin : setRegistration;
@@ -52,6 +57,13 @@ function LoginForm() {
     f({ ...obj, [name]: value });
   };
 
+  const onClick = (type, item) => {
+    console.log(type, item);
+    setRegistration({ ...register, [type.toLowerCase()]: item });
+  };
+
+  //Sign up function
+
   const onRegister = () => {
     console.log(JSON.stringify(register));
     axios
@@ -59,8 +71,9 @@ function LoginForm() {
       //.then(res => res)
       .then(({ data }) => {
         if (!data.success) {
-          addToast(data.message, { appearance: "error" });
+          addToast(data.message, { appearance: "error", autoDismiss: true });
         } else {
+          addToast(data.message, { appearance: "success", autoDismiss: true });
           setRegistration({
             name: "",
             dogName: "",
@@ -76,9 +89,29 @@ function LoginForm() {
       .catch(err => console.log("caught", err));
   };
 
-  const onClick = (type, item) => {
-    console.log(type, item);
-    setRegistration({ ...register, [type.toLowerCase()]: item });
+  //Sign in function
+
+  const onLogin = () => {
+    console.log("onLogin: ", JSON.stringify(login));
+    axios
+      .post("/api/account/signin", login)
+      //.then(res => res)
+      .then(({ data }) => {
+        if (!data.success) {
+          console.log({ data });
+          addToast(data.message, { appearance: "error", autoDismiss: true });
+        } else {
+          addToast(data.message, { appearance: "success", autoDismiss: true }, () => {
+            setTimeout( ()=> setIsAuthenticated(true), 1000);
+          });
+          setLogin({
+            username: "",
+            password: ""
+          });
+
+        }
+      })
+      .catch(err => console.log("caught", err));
   };
 
   if (loading) {
@@ -90,6 +123,10 @@ function LoginForm() {
   }
 
   if (!token) {
+    console.log(isAuthenticated);
+    if (isAuthenticated) {
+      return <Redirect to="/members" />;
+    }
     return (
       <div>
         <div className="heading">
@@ -105,31 +142,39 @@ function LoginForm() {
           </div>
         </div>
 
-        <div className="tile is-ancestor">
-          <div className="tile">
+        <div className="columns">
+          <div className="column is-half">
             <div className="notification">
-              <h1>Sign In</h1>
+              <h1 style={{ textAlign: "center" }}>Sign In</h1>
               <div className="field">
+
                 <p className="control">
                   <input
+                    id="fields1"
                     className="input"
                     type="text"
                     name="username"
                     placeholder="Username"
                     onChange={onChange}
                     value={login.username}
+                    style={{ width: "46%" }}
                   />
+                  <span className="icon is-small is-left">
+                    <i className="fas fa-user"></i>
+                  </span>
                 </p>
               </div>
               <div className="field">
                 <p className="control has-icons-left">
                   <input
+                    id="fields2"
                     className="input"
                     type="password"
                     name="password"
                     placeholder="Password"
                     onChange={onChange}
                     value={login.password}
+                    style={{ width: "46%" }}
                   />
                   <span className="icon is-small is-left">
                     <i className="fas fa-lock"></i>
@@ -138,13 +183,20 @@ function LoginForm() {
               </div>
               <div className="field">
                 <p className="control">
-                  <button className="button is-dark">Login</button>
+                  <button
+                    className="button is-dark"
+                    onSubmit={onClick}
+                    onClick={onLogin}
+                  >
+                    Login
+                  </button>
                 </p>
               </div>
             </div>
           </div>
-          <div class="tile">
+          <div className="column is-half">
             <SignUp
+              key={register.username}
               {...register}
               onSubmit={onRegister}
               onChange={onChange}
