@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
+import { Redirect } from "react-router-dom";
 import axios from "axios";
 
 function Logout() {
   const [user, setUser] = useState({});
 
-
   useEffect(() => {
-      console.log(user)
+    console.log(user);
     setUser(user);
-  }, []);
+  }, [user]);
 
   const onLogout = () => {
     console.log("button clicked");

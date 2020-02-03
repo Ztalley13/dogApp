@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const User = require("../../models/user");
 const UserSession = require("../../models/userSession");
+const mongoose = require("mongoose");
 // const usersController = require("../../controllers/usersController");
 
 //Sign Up
@@ -202,51 +203,20 @@ router.route("/member").get((req, res) => {
 // });
 
 router.route("/logout").delete((req, res) => {
-  console.log("logout route hit");
-  UserSession.deleteMany({});
-  (err, res) => {
-  if (err) {
-    return res.send({
-      success: false,
-      message: "Error: Server error"
+  mongoose.connection.db.dropCollection("usersessions", err => {
+    if (err) {
+      console.log(err);
+      res.send({
+        success: false,
+        message: "Logged Out"
+      });
+      return;
+    }
+    res.send({
+      success: true,
+      message: "Logged Out"
     });
-  } else {
-    return res.send({
-      sucess: true,
-      message: "Good"
-    });
-  }
-  // UserSession.findOneAndUpdate(
-  //   {
-  //     _id: token,
-  //     isDeleted: false
-  //   },
-  //   {
-  //     $set: { isDeleted: true }
-  //   },
-  //   null,
-  //   (err, sessions) => {
-  //     if (err) {
-  //       return res.send({
-  //         success: false,
-  //         message: "Error: server error"
-  //       });
-  //     }
-
-  //     if (sessions.length != 1) {
-  //       return res.send({
-  //         success: false,
-  //         message: "Error: Invalid"
-  //       });
-  //     } else {
-  //       return res.send({
-  //         success: true,
-  //         message: "Good"
-  //       });
-  //     }
-  //   }
-  // );
-}
+  });
 });
 
 module.exports = router;

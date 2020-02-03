@@ -56,10 +56,6 @@ function NavBar(props) {
               <Link className="navbar-item" to="/landing">
                 Members
               </Link>
-              <hr className="navbar-divider" />
-              <Link className="navbar-item" to="/blog">
-                Blog
-              </Link>
 
             </div>
           </div>
@@ -69,26 +65,29 @@ function NavBar(props) {
           <div className="navbar-item">
             <div className="buttons">
               <div className="button is-dark" id="signButton">
-                <Link to="/login"><button id="sign-up">
-                  <div className="c1" id="c1"></div>
-                  <div className="c2" id="c2"></div>
-                  <div className="c3" id="c3"></div>
-                  <div className="c4" id="c4"></div>
-                  <div className="b1" id="b1">
-                    <div className="b2" id="b2">
-                      Sign Up/Login
-                    </div>
+                <Link to="/login">
+                    <button id="sign-up">
+                      <div className="c1" id="c1"></div>
+                      <div className="c2" id="c2"></div>
+                      <div className="c3" id="c3"></div>
+                      <div className="c4" id="c4"></div>
+                      <div className="b1" id="b1">
+                        <div className="b2" id="b2">
+                          Sign Up/Login
+                        </div>
+                      </div>
+                    </button>
+                </Link>
 
-                  </div></button></a>
                   <Logout />
 
-                  </div></button></Link>
+                
 
               </div>
             </div>
           </div>
         </div>
-      </div >
+      </div>
     </nav >
   );
 }
