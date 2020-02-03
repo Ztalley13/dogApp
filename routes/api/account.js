@@ -201,10 +201,21 @@ router.route("/member").get((req, res) => {
 //   );
 // });
 
-router.route("/logout").get((req, res) => {
-  const { query } = req;
-  const { token } = query;
-console.log("logout route hit")
+router.route("/logout").delete((req, res) => {
+  console.log("logout route hit");
+  UserSession.deleteMany({});
+  (err, res) => {
+  if (err) {
+    return res.send({
+      success: false,
+      message: "Error: Server error"
+    });
+  } else {
+    return res.send({
+      sucess: true,
+      message: "Good"
+    });
+  }
   // UserSession.findOneAndUpdate(
   //   {
   //     _id: token,
@@ -235,6 +246,7 @@ console.log("logout route hit")
   //     }
   //   }
   // );
+}
 });
 
 module.exports = router;

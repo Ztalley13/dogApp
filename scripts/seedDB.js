@@ -27,7 +27,7 @@ const userSeed = [
         breed: "Boxer",
         profileImage: "https://i.pravatar.cc/301",
         dogImage: "https://images.dog.ceo/breeds/boxer/n02108089_11032.jpg",
-        description: "This is me and my dog.  We want to hang out with other people and other dogs similar to us."
+        description: "I'm a man on a mission, with a dog just trying to get a bone."
     },
     {
         userName: "Jason Hill",
@@ -37,7 +37,7 @@ const userSeed = [
         breed: "Pitbull",
         profileImage: "https://i.pravatar.cc/302",
         dogImage: "https://images.dog.ceo/breeds/pitbull/20190801_154956.jpg",
-        description: "This is me and my dog.  We want to hang out with other people and other dogs similar to us."
+        description: "I am a guy who enjoys taking long walks on the beach with my favorite girl, Clover. We are a perfect match!"
     },
     {        
         userName: "Zack White",

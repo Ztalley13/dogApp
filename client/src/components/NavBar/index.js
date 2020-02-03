@@ -1,6 +1,10 @@
 import React from "react";
 import "./style.css";
+
+import Logout from "../Logout";
+
 import { Link } from "react-router-dom";
+
 
 function NavBar(props) {
   return (
@@ -74,7 +78,12 @@ function NavBar(props) {
                     <div className="b2" id="b2">
                       Sign Up/Login
                     </div>
+
+                  </div></button></a>
+                  <Logout />
+
                   </div></button></Link>
+
               </div>
             </div>
           </div>
