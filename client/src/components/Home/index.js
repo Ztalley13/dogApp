@@ -2,25 +2,26 @@ import React from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
 
-
 function HomeForm() {
   return (
     <div>
-      <div className="heading">
-        <div className="row">
-          <div className="col-8">
-            <img
-              id="logo"
-              src="https://tse4.mm.bing.net/th?id=OIP.lpVib3nwr4YfMvR31Yzn7gHaFj&pid=Api&P=0&w=270&h=204 "
-              alt="logo"
-            />
-            <h1>Kibbles {"&"} Brews</h1>
+      <div>
+        <div className="heading">
+          <div className="row">
+            <div className="col-8">
+              <img
+                id="logo"
+                src="https://tse4.mm.bing.net/th?id=OIP.lpVib3nwr4YfMvR31Yzn7gHaFj&pid=Api&P=0&w=270&h=204 "
+                alt="logo"
+              />
+              <h1>Kibbles {"&"} Brews</h1>
+            </div>
           </div>
         </div>
       </div>
-
-      <div className="container-fluid">
-        <div className="navbar-header"></div>
+      <div class="container-fluid">
+        <div class="navbar-header">
+        </div>
       </div>
       <div className="signUpContainer">
         <div className="row">
@@ -42,14 +43,9 @@ function HomeForm() {
               </Link>
             </p>
           </div>
-
         </div>
       </div>
-
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script type="text/javascript" src="js/login.js"></script>
     </div>
   );
 }
-
 export default HomeForm;

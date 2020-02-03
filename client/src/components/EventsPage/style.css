@@ -6,7 +6,7 @@ html {
     
 }
 
-.container{
+#container{
   width: 30%;
   margin: auto;
 }
