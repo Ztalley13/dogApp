@@ -1,7 +1,5 @@
-import React, { useState, useReducer } from 'react';
+import React, { useState } from 'react';
 import dummy from "../../dummy.json";
-import API from '../../utils/API.js';
-// import PhotoCamera from '@material-ui/icons/PhotoCamera';
 
 export default function Main() {
 
@@ -29,7 +27,7 @@ export default function Main() {
     };
     return (
         <div className="main">
-            <img src={image} width="150" height="150" />
+            <img alt="Main" src={image} width="150" height="150" />
             <div className="upload" style={{"position": "absolute", "zIndex": "1"}}>
                 <button onClick={uploadWidget} className="upload-button">
                     Upload Image

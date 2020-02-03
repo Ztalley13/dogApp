@@ -5,7 +5,7 @@ import SignUpForm from "../components/SignUp";
 function SignUp(props) {
   return (
     <div>
-      <NavBar />
+      <NavBar {...props} />
       <SignUpForm onChange={props.onChange} />
     </div>
   );
