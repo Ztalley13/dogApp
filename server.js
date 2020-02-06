@@ -1,5 +1,4 @@
 const express = require("express");
-
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
@@ -12,7 +11,7 @@ app.use(express.json());
 app.use(express.static("public"));
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname + "client/build")));
+  app.use(express.static(path.join(__dirname, "client/build", "index.html")));
 }
 
 app.post("/members", function(req, res) {
