@@ -5,7 +5,7 @@ const User = require("../models/user");
 
 mongoose.connect(
   process.env.MONGODB_URI ||
-  "mongodb://localhost/kibbles"
+  "mongodb://root:password1@ds161008.mlab.com:61008/heroku_55wcg7v0"
 );
 
 const userSeed = [
