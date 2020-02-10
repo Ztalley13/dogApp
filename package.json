@@ -9,7 +9,7 @@
     "start:dev": "concurrently \"node server.js --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
     "seed": "node scripts/seedDB.js",
-    "heroku-postbuild": "cd client && npm install && node seeders/seed.js"
+    "heroku-postbuild": "cd client && npm install && node seeders/seedDB.js"
   },
   "author": "",
   "license": "ISC",
