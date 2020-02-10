@@ -3,9 +3,9 @@ import './style.css'
 function HomeForm() {
   return (
     <body>
-    <div class="heading">
-      <div class="row">
-          <div class="col-8">
+    <div className="heading">
+      <div className="row">
+          <div className="col-8">
           <img id="logo" src="https://tse4.mm.bing.net/th?id=OIP.lpVib3nwr4YfMvR31Yzn7gHaFj&pid=Api&P=0&w=270&h=204" alt="logo"/>
           <h1>Kibbles {'&'} Brews</h1>
       </div>
@@ -13,15 +13,15 @@ function HomeForm() {
       </div>
   </div>
   
-    {/* <!-- <nav class="navbar navbar-default"> --> */}
-      <div class="container-fluid">
-        <div class="navbar-header">
+    {/* <!-- <nav className="navbar navbar-default"> --> */}
+      <div className="container-fluid">
+        <div className="navbar-header">
         </div>
       </div>
     {/* </nav> */}
-    <div class="signUpContainer">
-      <div class="row">
-        <div class="col-md-6 col-md-3">
+    <div className="signUpContainer">
+      <div className="row">
+        <div className="col-md-6 col-md-3">
           <p className="home-info">Welcome to Kibbles and Brews!</p>
           <br></br>
           <p className="home-info">
