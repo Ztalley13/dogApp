@@ -2,6 +2,8 @@
 
 Where Man’s Best Friend Meets Man’s Best Beverage
 
+URL:  https://kibbles-n-brews.herokuapp.com/
+
 # User Story
 
 So...imagine! You’re that person, With this big beautiful dog and you’re wanting to go on a puppy play date but everyone you know has smaller dogs and they’re afraid that “Tonto”, here will trample over Ms.Johnson’s poor little “TinkerLilly”!
