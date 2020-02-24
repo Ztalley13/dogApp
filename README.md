@@ -2,7 +2,7 @@
 
 Where Man’s Best Friend Meets Man’s Best Beverage
 
-URL:  https://kibbles-n-brews.herokuapp.com/
+URL:  https://kibbles-n-brews.herokuapp.com/ 
 
 # User Story
 
